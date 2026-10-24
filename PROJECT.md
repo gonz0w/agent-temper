@@ -25,7 +25,7 @@ replaces them; they are not all claimed as individual owner questionnaire answer
 | License | BSD-3-Clause for original code, prose, and templates; external sources retain their terms. |
 | Work authority | GitHub Issues; one setup milestone and bounded executable issues. No local execution backlog or agent journal. |
 | Source control | Git, default branch `main`, short-lived `codex/` branches, coherent descriptive commits; no mandatory Conventional Commits format. |
-| Artifacts | Plain Markdown; Python 3.11+ standard-library checks. No third-party packages or frontend/runtime stack. |
+| Artifacts | Plain Markdown and optional consumer configuration templates; Python 3.11+ standard-library checks. No third-party packages or frontend/runtime stack. |
 | Verification | `python3 tools/verify.py`; behavioral changes to checks use actual red/green regression tests; prose uses source/link/example/reader validation. |
 | Review | A separate reviewer examines the final scope, evidence, and documents. An agent reviewer is permitted; review type and findings must be recorded. |
 | Integration | Agents may merge an accepted issue after current required CI succeeds and review findings are resolved. Prefer squash merge for the bounded deliverable. |

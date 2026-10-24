@@ -15,6 +15,7 @@ the shared rules and [the project policy](../PROJECT.md) for this repository's c
 
 - [Adopt Agent Temper](how-to/adopt.md).
 - [Update a pinned adoption](how-to/update.md).
+- [Configure optional Codex model routing](how-to/configure-codex.md).
 - [Retrofit an existing repository](how-to/retrofit.md).
 - [Write documentation](how-to/write-documentation.md).
 - [Discover and validate a product increment](how-to/discover-product.md).
@@ -29,6 +30,7 @@ the shared rules and [the project policy](../PROJECT.md) for this repository's c
 - [Profiles and extensions](reference/extensions.md): composition and adoption feedback.
 - [GitHub profile](../profiles/github.md): concrete tracker and review behavior.
 - [Strict test-first profile](../profiles/strict-test-first.md): optional stronger verification.
+- [Codex profile](../profiles/codex.md): optional model routing, handoffs, and escalation.
 - [Templates](../templates/README.md): starting points for project artifacts.
 - [Repository checks](../tools/README.md): supported syntax and validation limits.
 

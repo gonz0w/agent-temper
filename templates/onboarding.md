@@ -41,6 +41,9 @@ work while a required answer is pending; do not proceed with dependent work.
   milestones, and ownership represented?
 - May agents create work items and propose scope? Which work is authorized to start?
 - Which routine implementation choices are delegated?
+- If model routing would help, which roles, available models, effort settings,
+  resource limits, and fallbacks apply? Who may change them, and how will actual
+  routing and completed-work quality be checked? Otherwise leave the profile unselected.
 - May agents commit, push, and open reviews? What independent review is required?
 - May agents integrate after checks and review, or must they stop for approval?
 - Who may publish releases, deploy, access secrets, spend money, or contact others?

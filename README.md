@@ -25,6 +25,7 @@ the method requires no installed tool, service, or agent framework.
 | Keep a repository usable | [Maintain a repository](docs/how-to/maintain-repository.md) |
 | Prepare software delivery | [Release and recovery guide](docs/how-to/release-software.md) |
 | Adapt useful practices | [Profiles, local rules, and adoption feedback](docs/reference/extensions.md) |
+| Route Codex work by model | [Configure Codex model routing](docs/how-to/configure-codex.md) |
 | Write useful documentation | [Documentation method](docs/reference/documentation.md) |
 | Contribute here | [Contribution guide](CONTRIBUTING.md) and [project policy](PROJECT.md) |
 
@@ -50,9 +51,9 @@ a release is approved. See [work in GitHub](https://github.com/gonz0w/agent-temp
 for current assignments and [milestones](https://github.com/gonz0w/agent-temper/milestones)
 for capability goals.
 
-The repository contains original guidance, reusable Markdown templates, and small
-Python checks. It does not contain an agent runtime, a hosted documentation stack,
-or a required collection of development tools.
+The repository contains original guidance, reusable Markdown and optional Codex
+configuration templates, and small Python checks. It does not contain an agent
+runtime, a hosted documentation stack, or a required collection of development tools.
 
 ## Validate a checkout
 
@@ -72,6 +73,7 @@ the correctness of the method or formal ASD-STE100 compliance.
 - [Documentation index](docs/README.md): learning, task guides, reference, and rationale.
 - [Templates](templates/README.md): copy only the documents a project needs.
 - [GitHub profile](profiles/github.md): map the method to issues and reviews.
+- [Codex profile](profiles/codex.md): optionally route bounded work to suitable models.
 - [Sources and acknowledgements](docs/explanation/sources.md): where the ideas came from.
 - [Security](SECURITY.md), [contributing](CONTRIBUTING.md), and [BSD-3-Clause license](LICENSE).
 

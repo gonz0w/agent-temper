@@ -35,6 +35,9 @@ Start in the consumer repository root. Use the same exported
 `AGENT_TEMPER_SOURCE` and full `AGENT_TEMPER_REVISION` as the bundle procedure.
 You need Git, a POSIX shell, and Python 3.11+ for the checks below. The four target
 files must not exist; existing roles need a reviewed merge instead of this copy.
+This copy also rejects symlinked configuration directories or role files. If the
+project intentionally shares configuration through symlinks, review that layout
+and merge the roles at its authorized destination instead.
 
 ```sh
 sh <<'SH'
@@ -44,9 +47,12 @@ set -eu
 revision=$(git -C "$AGENT_TEMPER_SOURCE" rev-parse --verify \
   "$AGENT_TEMPER_REVISION^{commit}")
 test "$revision" = "$AGENT_TEMPER_REVISION"
+test ! -L .codex
+test ! -L .codex/agents
 roles='temper_workflow temper_implementer temper_analyst temper_reviewer'
 for role in $roles; do
   test ! -e ".codex/agents/$role.toml"
+  test ! -L ".codex/agents/$role.toml"
   git -C "$AGENT_TEMPER_SOURCE" cat-file -e \
     "$revision:templates/codex/agents/$role.toml"
 done

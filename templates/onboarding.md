@@ -11,6 +11,11 @@ work while a required answer is pending; do not proceed with dependent work.
 ## Purpose and adoption
 
 - What should this project deliver, for whom, and what is outside its scope?
+- For an uncertain product direction, what evidence supports the need, which
+  assumption needs testing, and who decides whether to proceed? Keep the current
+  investigation in its work item; a well-understood fix needs no discovery exercise.
+- When user benefit needs later evaluation, who owns that evaluation, what signal
+  matters, and what event triggers it? What research or data collection is authorized?
 - Who can settle policy? How must changes be approved and recorded?
 - Which immutable Agent Temper revision and tool or practice profiles will it adopt?
 - Which local rules and label/default mappings must remain? Are the selected rules
@@ -24,6 +29,8 @@ work while a required answer is pending; do not proceed with dependent work.
 - Which languages, toolchains, platforms, and compatibility promises are required?
 - What may agents decide about dependencies or architecture? What needs approval?
 - What are the local setup and check commands? Which checks does CI run?
+- Where can a new agent trace a user task through the code and its tests? Would a
+  short repository map improve the existing architecture references?
 - When are TDD, a failing reproduction, integration tests, or manual checks required?
 - Which checks need a real system or external service, and what evidence is enough?
 - What documentation, naming, licensing, and writing conventions apply?
@@ -38,6 +45,8 @@ work while a required answer is pending; do not proceed with dependent work.
 - May agents integrate after checks and review, or must they stop for approval?
 - Who may publish releases, deploy, access secrets, spend money, or contact others?
 - Which actions are prohibited? What are the acceptance and completion gates?
+- Which events trigger repository maintenance, and what may an agent resolve?
+  For shipped software, where are release, recovery, support, and incident procedures?
 
 ## Confirm and preserve
 

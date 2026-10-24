@@ -19,8 +19,11 @@ the method requires no installed tool, service, or agent framework.
 | --- | --- |
 | Understand the method | [The core method](METHOD.md) |
 | See a complete example | [Take an issue through delivery](docs/tutorials/first-issue.md) |
+| Turn a product idea into useful work | [Discover and validate a product increment](docs/how-to/discover-product.md) and [first-product tutorial](docs/tutorials/first-product.md) |
 | Set up a project | [Adopt Agent Temper](docs/how-to/adopt.md) and [onboarding questions](templates/onboarding.md) |
 | Improve an existing repository | [Retrofit a project](docs/how-to/retrofit.md) |
+| Keep a repository usable | [Maintain a repository](docs/how-to/maintain-repository.md) |
+| Prepare software delivery | [Release and recovery guide](docs/how-to/release-software.md) |
 | Adapt useful practices | [Profiles, local rules, and adoption feedback](docs/reference/extensions.md) |
 | Write useful documentation | [Documentation method](docs/reference/documentation.md) |
 | Contribute here | [Contribution guide](CONTRIBUTING.md) and [project policy](PROJECT.md) |

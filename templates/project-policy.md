@@ -53,6 +53,13 @@ apply. State why a category does not apply. Record required environment and
 external dependencies. Identify which commands CI runs and what cannot run
 locally; do not promise local and CI equivalence without checking it.
 
+Where relevant, link a short repository map from the architecture references.
+Record maintenance triggers and delegated actions, and link release, recovery,
+support, and incident procedures for shipped software. Keep each current pass or
+release's scope and evidence in its work item. Product investigations and later
+outcome evaluations identify their owner, decision criteria, and trigger there;
+this policy records the durable research and data-access authority.
+
 ## Agent authority
 
 Specify **allowed**, **ask first**, or **prohibited**, with conditions. A tool's

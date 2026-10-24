@@ -6,6 +6,8 @@ the shared rules and [the project policy](../PROJECT.md) for this repository's c
 ## Learn the workflow
 
 - [Take an issue through delivery](tutorials/first-issue.md): a small worked example.
+- [Take a product idea to its first useful increment](tutorials/first-product.md):
+  a fictional discovery, delivery, and feedback exercise.
 - [Example project policy](../examples/project-policy.md) and
   [example work item](../examples/work-item.md): fictional, filled-in records.
 
@@ -15,6 +17,9 @@ the shared rules and [the project policy](../PROJECT.md) for this repository's c
 - [Update a pinned adoption](how-to/update.md).
 - [Retrofit an existing repository](how-to/retrofit.md).
 - [Write documentation](how-to/write-documentation.md).
+- [Discover and validate a product increment](how-to/discover-product.md).
+- [Maintain a repository and orient a fresh agent](how-to/maintain-repository.md).
+- [Prepare a release and recovery procedure](how-to/release-software.md).
 
 ## Look up a rule
 

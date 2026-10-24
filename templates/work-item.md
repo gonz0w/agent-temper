@@ -4,6 +4,19 @@
 
 {{WHO_NEEDS_WHAT_AND_OBSERVABLE_BENEFIT}}
 
+## Discovery when needed
+
+{{CURRENT_TASK_WORKAROUND_AND_EVIDENCE_OR_LINKED_DISCOVERY}}
+
+{{ASSUMPTIONS_ALTERNATIVES_AND_BOUNDED_QUESTION}}
+
+{{INVESTIGATION_LIMIT_DECISION_CRITERION_AND_AUTHORITY}}
+
+Use this section when the need, solution, or benefit is uncertain. Set the
+decision criterion before observing results; record contrary evidence and limits.
+Remove this section for a clear fix or understood change. Research findings do
+not themselves authorize implementation.
+
 ## Scope
 
 {{INCLUDED_BEHAVIOR_AND_CONSTRAINTS}}
@@ -18,6 +31,8 @@
 
 Include failure cases and compatibility requirements where relevant. Keep related
 test cases in this work item; a checklist is not a reason to create many issues.
+For a product increment, cover one complete user task from its starting situation
+to a usable result, including necessary failure handling.
 
 ## Context and dependencies
 
@@ -35,3 +50,17 @@ Record the implementation approach, discoveries, actual verification, and
 continuation in the discussion. Identify the checked source revision, exact
 commands or manual procedure, outcomes, and limitations. Never claim an expected
 result as observed. Keep secrets and private artifacts out of public evidence.
+
+## Outcome evaluation when needed
+
+{{BENEFIT_SIGNAL_PROCEDURE_BASELINE_AND_LIMITS}}
+
+{{ACCOUNTABLE_OWNER_AND_DATE_OR_EVENT_TRIGGER}}
+
+{{DECISION_TO_INFORM_AND_LINKED_FOLLOW_UP_IF_SEPARATE}}
+
+Remove this section when later evaluation is unnecessary. Distinguish supported,
+contradicted, inconclusive, and unavailable findings. State whether this evaluation
+is part of current acceptance or separate work. If separate, link its owner and
+trigger before closing completed implementation; do not silently move an unmet
+acceptance condition into follow-up work.

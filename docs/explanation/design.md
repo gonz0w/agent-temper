@@ -38,6 +38,24 @@ offline copy makes the adopted material available to future agents and reviewers
 Updates are normal reviewed changes, with local Q&A where a new decision is needed.
 The manifest helps detect accidental edits; it does not prove the source is trusted.
 
+## Select practices for agent work
+
+The supporting guides combine practices whose outputs can be inspected and resumed:
+
+| Practice | Adaptation and reason |
+| --- | --- |
+| Continuous discovery | Separate needs, candidate solutions, assumptions, and observations so an agent can test an unknown before expanding implementation. |
+| Specification-driven development | Keep agreed behavior and independent examples explicit, then reconcile implementation and evidence against them. A small issue can hold the specification. |
+| DORA user focus and small batches | Deliver a usable increment and evaluate its intended benefit with a named owner and trigger. Passing technical checks does not establish that benefit. |
+| C4 architecture views | Show only the boundaries and relationships needed to trace a task. Link source and tests from a compact map; diagrams are optional. |
+| Release engineering | Tie delivery checks and recovery decisions to an identified artifact and target so a later agent can assess what happened. |
+
+These are selected ideas, not wholesale framework adoption or a claim that one
+method is best for all agents. Existing policy, tracker, and verification rules
+remain authoritative. No additional runtime, mandatory document hierarchy, research
+cadence, or release authority follows from the guides. The [sources](sources.md)
+identify the primary material; adoption observations must establish local value.
+
 ## Evaluate before expanding
 
 Instruction-file research has mixed results across tasks and agents. The sources

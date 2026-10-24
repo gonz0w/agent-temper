@@ -111,4 +111,3 @@ Keep a compact checkpoint in the work item when work is interrupted or handed of
 Do not paste a full conversation or maintain a second status journal. A new agent
 must recheck current state; the checkpoint is evidence and orientation, not a
 guarantee that source, permissions, or external systems remain unchanged.
-

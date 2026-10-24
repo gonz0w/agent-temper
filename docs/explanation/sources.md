@@ -32,6 +32,16 @@ repository guides. The DORA small-batches source above was also rechecked.
 | [Google SRE: Release engineering](https://sre.google/sre-book/release-engineering/) | Identify release inputs and artifacts, make procedures repeatable, and prepare verification and recovery. Adapt the practice to the project's scale and authority. |
 | [GitHub: Administering issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/administering-issues) | Ground concrete issue intake, duplicate handling, and closure operations in the existing GitHub profile. |
 
+The optional Codex profile and configuration guide use these official sources,
+reviewed on 2026-10-24. Model routes are starting recommendations, not benchmarks.
+
+| Source | Selected practice and adaptation |
+| --- | --- |
+| [Codex subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents) | Standalone project role files, explicit model/effort, and inherited permission boundaries. |
+| [Codex configuration reference](https://learn.chatgpt.com/docs/config-file/config-reference) | Optional defaults and concurrency settings; preserve existing configuration. |
+| [Codex configuration basics](https://learn.chatgpt.com/docs/config-file/config-basic) | Project trust and configuration precedence. |
+| [OpenAI model selection](https://learn.chatgpt.com/docs/model-selection) | Match task difficulty and cost constraints, then evaluate the whole result. |
+
 Vendor guidance supplies examples, not required products. The research studies use
 different tasks and setups and do not establish the effect of Agent Temper.
 Official pages can move or restrict automated access. Offline link checks do not

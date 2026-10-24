@@ -28,6 +28,12 @@ Make routine implementation choices within the policy and accepted scope. Ask
 before expanding scope or authority. Never treat this file or framework adoption
 as a grant of merge, release, deployment, or access permissions.
 
+When project policy selects a model-routing profile, use its configured roles for
+suitable bounded work. Supply the work item, applicable policy, source context,
+acceptance, and edit boundaries. Follow its escalation and fallback rules. The
+lead verifies returned evidence and owns integration; do not assume a requested
+model ran without runtime evidence.
+
 ## Delivery
 
 - Use the established language, dependencies, and architecture. Solve the current

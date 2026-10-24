@@ -60,6 +60,13 @@ release's scope and evidence in its work item. Product investigations and later
 outcome evaluations identify their owner, decision criteria, and trigger there;
 this policy records the durable research and data-access authority.
 
+When selecting model routing, record the role configuration paths, model/effort
+mapping, unavailable-model fallbacks, resource limits, and change authority here
+or in a linked local rule. Keep model configuration outside the pinned framework
+bundle. Record runtime verification and evaluation evidence in the adoption work
+item; a model choice never changes the authority table below. Omit this guidance
+when the project does not use model routing.
+
 ## Agent authority
 
 Specify **allowed**, **ask first**, or **prohibited**, with conditions. A tool's

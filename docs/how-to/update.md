@@ -31,6 +31,9 @@ bounded update work item in the authorized tracker.
    new revision. Removing or replacing a selected profile needs the recorded
    change authority and a coherent update to dependent rules and references. Keep
    a recoverable source revision of the previous adoption.
+   If selecting or updating Codex routing, follow [Configure Codex](configure-codex.md).
+   Merge adapted `.codex/agents/` files separately from the upstream bundle; a
+   bundle update does not install roles or change the active chat's model.
 6. **Verify the result.** Check the manifest and inventory, follow internal links
    offline, and walk a representative ready work item through the revised
    rules. Run any local checks affected by the change. Record actual results

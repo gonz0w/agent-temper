@@ -43,6 +43,10 @@ short rules in project policy; use the [extension template](../../templates/exte
 only when a separate record helps. Record a complete equivalent state mapping if
 the project uses different labels from a selected tracker profile.
 
+For optional Codex model routing, use [Configure Codex](configure-codex.md) alongside
+this procedure. It adds local role configuration and runtime checks after the
+bundle and entry points below; copying the profile alone does not activate routing.
+
 Keep the distinction between an unresolved decision and a decision that
 delegates routine choices to agents. Once accepted, these answers persist
 across agents and sessions. An upstream update does not change them.

@@ -12,13 +12,16 @@ permission from a blank field.
 | Policy owner and authorized decision makers | {{POLICY_OWNER}} |
 | Agent Temper source and immutable revision | {{SOURCE_URL_AND_COMMIT}} |
 | Local framework bundle and adoption record | {{FRAMEWORK_PATH}}/SOURCE.md |
-| Applicable tool profiles | {{PROFILE_PATHS_OR_NONE}} |
+| Selected tool and practice profiles | {{PROFILE_PATHS_AND_APPLICABILITY_OR_NONE}} |
+| Local extensions and label/default mappings | {{CANONICAL_PATHS_AND_MAPPINGS_OR_NONE}} |
 | Product and architecture references | {{CONTRACT_DOCUMENT_PATHS}} |
 | Policy change procedure | {{WHO_APPROVES_AND_HOW_DECISIONS_ARE_RECORDED}} |
 
-Apply the pinned method and applicable profiles together with this policy.
-Project choices fill decisions delegated by the method. Resolve contradictions
-with the owner before dependent work. Record a deliberate scoped exception when
+Apply the pinned method and explicitly selected profiles together with this policy.
+A copied profile is not selected merely because its file exists. Record extension
+source identities, compatibility, verification, and change authority here or in a
+linked local record. Project choices fill decisions delegated by the method.
+Resolve contradictions with the owner before dependent work. Record a deliberate scoped exception when
 departing from an adopted requirement; never invent an undocumented override.
 
 ## Technical constraints

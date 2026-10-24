@@ -9,7 +9,8 @@ operation, maintenance, and the documents a person reads.
 **Must** identifies a requirement of this method. **Should** identifies a default
 that permits a recorded, scoped reason to use another approach. **When** makes a
 rule conditional. A project records its adopted revision, applicable profiles,
-choices, and exceptions. Adoption never grants permission to act.
+choices, and exceptions. Only explicitly selected profiles apply; a file in the
+bundle does not activate itself. Adoption never grants permission to act.
 
 Platform instructions, access controls, and the owner's actual authority still
 apply. A work item defines a task; it cannot silently override project policy.
@@ -83,5 +84,7 @@ after checking its users and recovery implications.
 - [Workflow](docs/reference/workflow.md): discovery through maintenance and continuation.
 - [Verification](docs/reference/verification.md): test selection, evidence, and review.
 - [Documentation](docs/reference/documentation.md): structure and clear writing for readers.
+- [Profiles and extensions](docs/reference/extensions.md): compose rules and feed adoption findings back.
 - [GitHub profile](profiles/github.md): the first concrete mapping of portable concepts.
+- [Strict test-first profile](profiles/strict-test-first.md): an optional stronger verification practice.
 

@@ -21,7 +21,9 @@ the shared rules and [the project policy](../PROJECT.md) for this repository's c
 - [Workflow](reference/workflow.md): discovery, selection, implementation, and delivery.
 - [Verification](reference/verification.md): check selection, review, and evidence.
 - [Documentation](reference/documentation.md): document purposes and writing conventions.
+- [Profiles and extensions](reference/extensions.md): composition and adoption feedback.
 - [GitHub profile](../profiles/github.md): concrete tracker and review behavior.
+- [Strict test-first profile](../profiles/strict-test-first.md): optional stronger verification.
 - [Templates](../templates/README.md): starting points for project artifacts.
 - [Repository checks](../tools/README.md): supported syntax and validation limits.
 

@@ -21,6 +21,7 @@ the method requires no installed tool, service, or agent framework.
 | See a complete example | [Take an issue through delivery](docs/tutorials/first-issue.md) |
 | Set up a project | [Adopt Agent Temper](docs/how-to/adopt.md) and [onboarding questions](templates/onboarding.md) |
 | Improve an existing repository | [Retrofit a project](docs/how-to/retrofit.md) |
+| Adapt useful practices | [Profiles, local rules, and adoption feedback](docs/reference/extensions.md) |
 | Write useful documentation | [Documentation method](docs/reference/documentation.md) |
 | Contribute here | [Contribution guide](CONTRIBUTING.md) and [project policy](PROJECT.md) |
 

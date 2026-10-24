@@ -3,7 +3,8 @@
 Read this file, the [project policy]({{PROJECT_POLICY_PATH}}), and the adopted
 [Agent Temper method]({{FRAMEWORK_PATH}}/METHOD.md) before working. The
 [adoption record]({{FRAMEWORK_PATH}}/SOURCE.md) identifies the pinned upstream
-revision.
+revision. Apply only the profiles and local extensions selected in project policy;
+read their requirements and compatibility conditions before affected work.
 
 ## Work authority
 

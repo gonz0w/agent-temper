@@ -11,7 +11,10 @@ authorized tracker for the retrofit work item.
 1. **Identify the actual conflicts.** Inventory existing agent entry points,
    policies, trackers, CI entry points, README links, and decision records.
    Record concrete contradictions and duplicates in the retrofit issue. A
-   different filename or directory layout is not by itself a defect.
+   different filename or directory layout is not by itself a defect. Use the
+   [adoption decision criteria](../reference/extensions.md#decide-where-a-difference-belongs)
+   to separate a core improvement, reusable profile, local rule, deviation, and
+   obsolete practice. Retain useful differences with a demonstrated benefit.
 2. **Resolve policy through Q&A.** Use the project-policy template from the
    [adoption guide](adopt.md). Retain existing approved decisions unless the
    authorized decision maker changes them. Ask about missing authority,
@@ -22,7 +25,10 @@ authorized tracker for the retrofit work item.
    changes. Preserve identifiers or links that let readers follow the history.
 4. **Adopt a pinned bundle.** Follow [Adopt Agent Temper](adopt.md). Keep local
    extensions and approved exceptions outside the upstream copy. Do not silently
-   replace stronger security, recovery, licensing, or evidence requirements.
+   replace stronger security, recovery, licensing, or evidence requirements. Select
+   compatible profiles explicitly and record local mappings; do not rename labels
+   only to match an example. Repair a local integration defect at its own boundary
+   instead of weakening general verification.
 5. **Repair navigation and remove competing instructions.** Replace obsolete
    entry points with concise pointers where readers still need them. Preserve
    consequential history and executed evidence in their required locations.
@@ -34,7 +40,10 @@ authorized tracker for the retrofit work item.
 7. **Integrate through the existing authorized process.** Record checks and the
    final mapping of authority in the retrofit issue. After integration, confirm
    the expected tracker records and navigation work. Retain a clear way to
-   restore the previous policy revision if the transition has a defect.
+   restore the previous policy revision if the transition has a defect. Record
+   concrete adoption findings and propose bounded upstream improvements through
+   [the feedback route](../reference/extensions.md#feed-useful-findings-back). A
+   proposal or upstream merge does not update this project's adopted pin.
 
 Reorganize directories only when the accepted issue identifies a concrete
 navigation, ownership, packaging, or maintenance problem. Move a coherent set,

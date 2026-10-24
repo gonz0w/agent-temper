@@ -25,7 +25,11 @@ to a milestone only when it contributes to that capability.
 
 ## State, dependencies, and ownership
 
-Each open executable issue has exactly one progress label:
+Each open executable issue has exactly one progress label. The following names
+are defaults. A project may record a complete one-to-one mapping from these states
+to equivalent local labels: one label per state, with no label used for two states.
+Keep the meanings, readiness conditions, and closure rules intact. Without a local
+mapping, use these defaults.
 
 | Label | Meaning |
 | --- | --- |
@@ -35,6 +39,12 @@ Each open executable issue has exactly one progress label:
 | `status:in-progress` | An identified agent or person is implementing it. |
 | `status:blocked` | A named dependency or decision prevents progress. |
 | `status:review` | Implementation is ready for its required review. |
+
+For example, `status:needs-triage` may map to the backlog state. Record all other
+state mappings too, even when their names stay the same. Adoption does not silently
+relabel existing issues; review any required transition under project authority.
+An ambiguous or conflicting mapping blocks affected work until resolved through
+[the extension policy](../docs/reference/extensions.md).
 
 Closed issues use GitHub's closure state and have no active progress label.
 Document closure reason; “not planned” is different from completed. Epics are

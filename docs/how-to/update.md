@@ -17,7 +17,9 @@ bounded update work item in the authorized tracker.
    candidate revisions, including removed rules and affected templates.
 3. **Assess the effect on this project.** Identify changed obligations, command
    requirements, current exceptions, and active work. Resolve new policy gaps
-   or conflicts with the authorized decision maker. Record deliberate
+   or conflicts with the authorized decision maker. Recheck selected profile and
+   extension dependencies, compatibility, local mappings, and verification. New
+   files in the candidate bundle do not select new profiles. Record deliberate
    supersession where a previous decision changes.
 4. **Prepare the candidate separately.** Follow the copy procedure in
    [Adopt Agent Temper](adopt.md) from an empty disposable directory. Preserve
@@ -26,7 +28,9 @@ bounded update work item in the authorized tracker.
 5. **Update the project coherently.** Replace the upstream bundle as a unit.
    Update local references, explicit exceptions, and selected templates only
    where the accepted update requires it. Remove upstream files deleted by the
-   new revision. Keep a recoverable source revision of the previous adoption.
+   new revision. Removing or replacing a selected profile needs the recorded
+   change authority and a coherent update to dependent rules and references. Keep
+   a recoverable source revision of the previous adoption.
 6. **Verify the result.** Check the manifest and inventory, follow internal links
    offline, and walk a representative ready work item through the revised
    rules. Run any local checks affected by the change. Record actual results
@@ -39,6 +43,8 @@ Expected result: the project has one identified upstream revision and one set
 of explicit local decisions. There is no automatic update from a moving branch.
 
 If the candidate is rejected, leave the adopted revision in place and record
-the reason in the update item. If a defect appears after integration, restore
-the previous adopted revision through the project's normal change process,
+the reason in the update item. Use the
+[adoption feedback route](../reference/extensions.md#feed-useful-findings-back) when
+the finding justifies a shared improvement. If a defect appears after integration,
+restore the previous adopted revision through the project's normal change process,
 including any local policy change that the rollback requires.

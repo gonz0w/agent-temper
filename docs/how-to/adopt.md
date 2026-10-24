@@ -36,6 +36,13 @@ tracker, languages, supported platforms, checks, review requirements, and agent
 authority for integration and release. Record who may change each policy and
 how a change becomes effective.
 
+Select only the profiles and local extensions the project needs. Follow the
+[composition rules](../reference/extensions.md): record their applicability,
+source identity, dependencies/conflicts, verification, and change authority. Keep
+short rules in project policy; use the [extension template](../../templates/extension.md)
+only when a separate record helps. Record a complete equivalent state mapping if
+the project uses different labels from a selected tracker profile.
+
 Keep the distinction between an unresolved decision and a decision that
 delegates routine choices to agents. Once accepted, these answers persist
 across agents and sessions. An upstream update does not change them.
@@ -56,8 +63,9 @@ Keep upstream files under `.agent-temper/` with their original paths:
 
 `METHOD.md`, `docs/reference/`, `profiles/`, and `LICENSE` are the upstream
 bundle. `SOURCE.md` and `SHA256SUMS` are local provenance records. The bundle's
-internal relative links remain usable offline. Links to external sources still
-need network access.
+internal relative links remain usable offline. Only profiles explicitly selected
+in project policy apply; importing the whole directory does not activate them all.
+Links to external sources still need network access.
 
 For this optional shell example, you need Git, `tar`, and either `shasum` or
 `sha256sum`. No new runtime package is required. Start in the consumer project's
@@ -154,10 +162,14 @@ extra file. Confirm that no unexpected policy was added inside the bundle.
 Follow the local agent entry point with network access unavailable. Confirm
 that the method, selected profile, and project policy can be read and their
 internal links work. Then select a sample ready work item and identify its
-acceptance, required checks, review, and integration authority. Do not claim a
-live remote tracker is available offline.
+acceptance, required checks, review, and integration authority under the combined
+method, selected profiles, and local rules. Confirm that state mappings preserve
+the intended meanings and no competing instructions remain. Do not claim a live
+remote tracker is available offline.
 
 Record the revision, manifest review, checks, resolved decisions, and any
 limitations in the adoption work item. Integrate using the project's approved
 process. The resulting source revision is the project's adopted authority;
-future upstream changes require an explicit update.
+future upstream changes require an explicit update. Record useful findings in the
+adoption item and use the [feedback route](../reference/extensions.md#feed-useful-findings-back)
+for a justified upstream proposal.

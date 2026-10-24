@@ -12,9 +12,12 @@ work while a required answer is pending; do not proceed with dependent work.
 
 - What should this project deliver, for whom, and what is outside its scope?
 - Who can settle policy? How must changes be approved and recorded?
-- Which immutable Agent Temper revision and tool profiles will it adopt?
+- Which immutable Agent Temper revision and tool or practice profiles will it adopt?
+- Which local rules and label/default mappings must remain? Are the selected rules
+  compatible, and who may approve updates, exceptions, or removal?
 - Which existing product, architecture, security, and privacy contracts apply?
 - Does an adopted requirement need a scoped, approved exception?
+- Which observed adoption problems belong upstream, and which are local or obsolete?
 
 ## Technology and verification
 

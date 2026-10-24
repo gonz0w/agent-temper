@@ -16,9 +16,16 @@ placeholders before treating the procedure as executable or the record as comple
 
 ## Procedure and acceptance
 
-| Step | Environment, directory, inputs, and command or manual procedure | Expected result and stop condition | Actual evidence |
-| --- | --- | --- | --- |
-| {{BUILD_INSTALL_PUBLISH_DEPLOY_OR_CHECK}} | {{EXACT_PROCEDURE_OR_CANONICAL_REFERENCE}} | {{OBSERVABLE_EXPECTATION_AND_FAILURE_TRIGGER}} | {{NOT_RUN_OR_ARTIFACT_ENVIRONMENT_RESULT_AND_EVIDENCE_LINK}} |
+Repeat this block for each build, installation, publication, deployment, or check
+step. Keep expected results separate from observations.
+
+### {{STEP_NAME}}
+
+- Environment, working directory, and inputs: {{ENVIRONMENT_AND_INPUTS}}
+- Exact command, manual procedure, or canonical reference: {{PROCEDURE}}
+- Expected result: {{EXPECTED_RESULT}}
+- Stop condition: {{FAILURE_TRIGGER}}
+- Actual result and evidence: {{NOT_RUN_OR_OBSERVATION_AND_LINK}}
 
 Include the product's smoke check at the actual delivery boundary. Separate
 candidate verification from publication or production checks. Identify the

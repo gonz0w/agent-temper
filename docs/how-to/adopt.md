@@ -54,6 +54,11 @@ Keep the distinction between an unresolved decision and a decision that
 delegates routine choices to agents. Once accepted, these answers persist
 across agents and sessions. An upstream update does not change them.
 
+For a larger policy, use [Compose project policy](compose-policy.md) to keep a
+short entry point and selected modules. A small project can keep answers inline.
+Review a concrete check/delivery map; framework adoption alone does not create or
+qualify a CI/CD pipeline.
+
 ## 2. Copy and identify the upstream bundle
 
 Keep upstream files under `.agent-temper/` with their original paths:

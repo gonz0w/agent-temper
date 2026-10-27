@@ -20,6 +20,9 @@ work while a required answer is pending; do not proceed with dependent work.
 - Which immutable Agent Temper revision and tool or practice profiles will it adopt?
 - Which local rules and label/default mappings must remain? Are the selected rules
   compatible, and who may approve updates, exceptions, or removal?
+- Which policy concerns need a separate selected module, and which fit inline?
+  Where is each rule's single canonical home? Which rules are requirements,
+  defaults or delegated choices, and are any explicitly superseded?
 - Which existing product, architecture, security, and privacy contracts apply?
 - Does an adopted requirement need a scoped, approved exception?
 - Which observed adoption problems belong upstream, and which are local or obsolete?
@@ -29,6 +32,10 @@ work while a required answer is pending; do not proceed with dependent work.
 - Which languages, toolchains, platforms, and compatibility promises are required?
 - What may agents decide about dependencies or architecture? What needs approval?
 - What are the local setup and check commands? Which checks does CI run?
+- Which passive source checks are permitted on which hosts? Does a standing
+  method-maintenance boundary exist, and what does it exclude?
+- What are pipeline triggers, inputs/artifacts, permitted executors, required
+  outcomes and stop/recovery paths? What needs manual or release approval?
 - Where can a new agent trace a user task through the code and its tests? Would a
   short repository map improve the existing architecture references?
 - When are TDD, a failing reproduction, integration tests, or manual checks required?

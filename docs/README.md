@@ -8,11 +8,13 @@ the shared rules and [the project policy](../PROJECT.md) for this repository's c
 - [Take an issue through delivery](tutorials/first-issue.md): a small worked example.
 - [Take a product idea to its first useful increment](tutorials/first-product.md):
   a fictional discovery, delivery, and feedback exercise.
+- [Walk a Windows game through Temper](tutorials/windows-game.md): a fictional modular policy and development/delivery exercise.
 - [Example project policy](../examples/project-policy.md) and
   [example work item](../examples/work-item.md): fictional, filled-in records.
 
 ## Complete a task
 
+- [Compose project policy](how-to/compose-policy.md).
 - [Preflight adoption scope and gates](how-to/preflight-adoption.md).
 - [Adopt Agent Temper](how-to/adopt.md).
 - [Audit an adoption without changing it](how-to/audit-adoption.md).

@@ -24,6 +24,7 @@ the method requires no installed tool, service, or agent framework.
 | Improve an existing repository | [Retrofit a project](docs/how-to/retrofit.md) |
 | Keep a repository usable | [Maintain a repository](docs/how-to/maintain-repository.md) |
 | Prepare software delivery | [Release and recovery guide](docs/how-to/release-software.md) |
+| Compose project-specific policy | [Policy composition guide](docs/how-to/compose-policy.md) and [fictional Windows game](docs/tutorials/windows-game.md) |
 | Adapt useful practices | [Profiles, local rules, and adoption feedback](docs/reference/extensions.md) |
 | Route Codex work by model | [Configure Codex model routing](docs/how-to/configure-codex.md) |
 | Write useful documentation | [Documentation method](docs/reference/documentation.md) |

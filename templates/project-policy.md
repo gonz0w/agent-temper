@@ -24,6 +24,25 @@ linked local record. Project choices fill decisions delegated by the method.
 Resolve contradictions with the owner before dependent work. Record a deliberate scoped exception when
 departing from an adopted requirement; never invent an undocumented override.
 
+## Compose the policy deliberately
+
+Keep small rules inline. For larger concerns, link selected modules from the
+answer tables above; do not maintain a second selection list here. Each module
+owns its rule text and records scope, source identity, owner, dependencies,
+compatibility and change authority. Use the [extension template](extension.md)
+when it helps. Retained module references must work offline.
+
+State requirements, defaults and delegated choices explicitly. Give referenced
+rules stable IDs. Record approved supersession by ID/source and scope; file order
+or a newer module never silently overrides a requirement. Label historical
+exceptions and list only currently active allowances below. A tool can report
+structure; a reviewer still checks meaning, authority and conflicts.
+
+Use the [composition guide](../docs/how-to/compose-policy.md) for examples. The
+[verification policy](verification-policy.md) and
+[method-maintenance policy](method-maintenance.md) are optional starting points;
+copying them does not select a process or change permissions.
+
 ## Technical constraints
 
 | Decision | Recorded answer |

@@ -15,6 +15,7 @@ the shared rules and [the project policy](../PROJECT.md) for this repository's c
 
 - [Preflight adoption scope and gates](how-to/preflight-adoption.md).
 - [Adopt Agent Temper](how-to/adopt.md).
+- [Audit an adoption without changing it](how-to/audit-adoption.md).
 - [Update a pinned adoption](how-to/update.md).
 - [Configure optional Codex model routing](how-to/configure-codex.md).
 - [Retrofit an existing repository](how-to/retrofit.md).

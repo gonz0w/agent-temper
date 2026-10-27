@@ -1,0 +1,20 @@
+# Fictional declared selection; PROJECT records its illustrative adoption.
+# Reading/checking this file grants no actual permission or qualification.
+schema_version = 1
+
+[[modules]]
+id = "execution"
+path = "policy/execution.md"
+owner = "fictional-game-owner"
+
+[[modules]]
+id = "verification"
+path = "policy/verification.md"
+owner = "fictional-game-owner"
+requires = ["execution"]
+
+[[modules]]
+id = "integration"
+path = "policy/integration.md"
+owner = "fictional-game-owner"
+requires = ["execution", "verification"]

@@ -21,6 +21,14 @@ a trusted local source copy. It is optional and does not run as a consumer audit
 from `verify.py`; the verifier runs only its synthetic fixture tests. It performs
 no network, Git, subprocess or role execution and adds no integration authority.
 
+## Optional policy-selection checker
+
+The standalone [policy-selection checker](../docs/how-to/check-policy.md) inspects
+an explicit optional manifest, local references, dependencies, declared conflicts
+and date expiry. It never interprets approvals/prose or executes checks. The
+verifier runs its synthetic tests; consumers need no manifest, policy runtime or
+additional package. The adoption auditor remains a separate integrity tool.
+
 ## What the checker verifies
 
 The checker reads UTF-8 files whose extension is `.md`, excluding `.git`, `.venv`,

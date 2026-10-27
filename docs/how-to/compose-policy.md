@@ -41,6 +41,11 @@ Walk one ready work item from selection through acceptance, review and delivery.
 A new agent should find the applicable rules and authority from PROJECT without
 reconstructing a conversation or searching expired approvals.
 
+An optional [selection checker](check-policy.md) can inspect declared references,
+dependencies, conflicts and date expiry. Its report is a derived view, never an
+approval or semantic policy decision. The Windows fixture demonstrates this option;
+plain Markdown selections remain sufficient.
+
 ## 3. Map checks to effects and permitted execution
 
 Use the [verification-policy template](../../templates/verification-policy.md)

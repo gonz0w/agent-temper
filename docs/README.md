@@ -15,6 +15,7 @@ the shared rules and [the project policy](../PROJECT.md) for this repository's c
 ## Complete a task
 
 - [Compose project policy](how-to/compose-policy.md).
+- [Check declared policy selections](how-to/check-policy.md).
 - [Preflight adoption scope and gates](how-to/preflight-adoption.md).
 - [Adopt Agent Temper](how-to/adopt.md).
 - [Audit an adoption without changing it](how-to/audit-adoption.md).

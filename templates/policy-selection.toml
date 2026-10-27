@@ -1,0 +1,17 @@
+# Optional selection record. Copy only after explicit project adoption.
+# Complete the owner and select each real module once. Rule prose stays in Markdown.
+# More modules can declare requires/conflicts lists of IDs; no includes/imports.
+schema_version = 1
+
+[[modules]]
+id = "project"
+path = "PROJECT.md"
+owner = "{{POLICY_OWNER}}"
+
+# Optional active exception example: adapt every field before uncommenting.
+# [[exceptions]]
+# id = "temporary-inspection"
+# path = "docs/policy/inspection-exception.md"
+# modules = ["project"]
+# expires_on = "2030-01-01"
+# ends_when = "identified work merges or is abandoned"

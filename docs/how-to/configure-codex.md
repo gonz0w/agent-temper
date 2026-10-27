@@ -2,7 +2,7 @@
 
 Use this guide to add the optional [Codex profile](../../profiles/codex.md) to one
 project. The result is explicit routing for routine support, implementation,
-complex analysis, and separate review. The core method stays tool-neutral.
+product-facing work, complex analysis, and separate review. The core method stays tool-neutral.
 
 ## Before you start
 
@@ -25,6 +25,11 @@ roles and models you can use, reasoning effort, unavailable-model fallback,
 resource limits, and authority to change those choices. The profile table gives
 starting defaults; a project may choose supported alternatives.
 
+For the product route, select `temper_product` with Terra/medium and explicitly
+record `temper_implementer` with Sol/high as its unavailable-model/tool fallback.
+Preserve the existing four routes. Check the Terra client requirement in the
+[profile](../../profiles/codex.md#record-the-local-selection).
+
 Inspect existing project and personal Codex roles and defaults for name conflicts.
 Keep the `temper_` names distinct or record a deliberate local rename. Preserve
 existing permission settings, integrations, and unrelated configuration.
@@ -33,7 +38,7 @@ existing permission settings, integrations, and unrelated configuration.
 
 Start in the consumer repository root. Use the same exported
 `AGENT_TEMPER_SOURCE` and full `AGENT_TEMPER_REVISION` as the bundle procedure.
-You need Git, a POSIX shell, and Python 3.11+ for the checks below. The four target
+You need Git, a POSIX shell, and Python 3.11+ for the checks below. The five target
 files must not exist; existing roles need a reviewed merge instead of this copy.
 This copy also rejects symlinked configuration directories or role files. If the
 project intentionally shares configuration through symlinks, review that layout
@@ -49,7 +54,7 @@ revision=$(git -C "$AGENT_TEMPER_SOURCE" rev-parse --verify \
 test "$revision" = "$AGENT_TEMPER_REVISION"
 test ! -L .codex
 test ! -L .codex/agents
-roles='temper_workflow temper_implementer temper_analyst temper_reviewer'
+roles='temper_workflow temper_product temper_implementer temper_analyst temper_reviewer'
 for role in $roles; do
   test ! -e ".codex/agents/$role.toml"
   test ! -L ".codex/agents/$role.toml"
@@ -64,10 +69,14 @@ done
 SH
 ```
 
-Expected result: four role files under `.codex/agents/`, taken from the pinned
+Expected result: five role files under `.codex/agents/`, taken from the pinned
 commit. If copying fails partway through, inspect the partial result before
 retrying. Remove only files created by that failed attempt, or finish the reviewed
 merge manually. Do not overwrite an existing role or unrelated configuration.
+
+For an existing four-role adoption, merge the revised profile and policy, then
+copy only the new product template from the selected pin. Preserve the adapted
+existing roles. Do not rerun the new-install copy block over existing files.
 
 These are adapted local project files, outside `.agent-temper/` and its upstream
 checksum manifest. Review them into the consumer repository with the policy.
@@ -81,7 +90,8 @@ For a project that accepted the default role names, this is example text:
 
 ```text
 Apply the Codex routing profile selected in PROJECT.md. When useful, delegate
-bounded routine inspection to temper_workflow, accepted implementation to
+bounded routine inspection to temper_workflow, accepted product-facing work to
+temper_product, accepted implementation to
 temper_implementer, difficult analysis to temper_analyst, and final separate
 review to temper_reviewer. Supply the issue, applicable policy, relevant files,
 acceptance, and edit boundaries. Follow the profile's escalation and fallback
@@ -115,7 +125,7 @@ python3 - <<'PY'
 from pathlib import Path
 import tomllib
 
-roles = ('temper_workflow', 'temper_implementer', 'temper_analyst', 'temper_reviewer')
+roles = ('temper_workflow', 'temper_product', 'temper_implementer', 'temper_analyst', 'temper_reviewer')
 for role in roles:
     path = Path('.codex/agents') / f'{role}.toml'
     data = tomllib.loads(path.read_text(encoding='utf-8'))
@@ -131,7 +141,7 @@ if config.exists():
 PY
 ```
 
-Expected result: four model/effort lines and no parse/assertion errors. Adapt the
+Expected result: five model/effort lines and no parse/assertion errors. Adapt the
 role list if policy deliberately renamed roles. This checks syntax and required
 fields, not model availability or Codex behavior.
 

@@ -9,6 +9,7 @@ Files here are source templates; Codex does not load this directory as project r
 | Template | Assignment |
 | --- | --- |
 | [temper_workflow.toml](agents/temper_workflow.toml) | Routine inspection and summaries with Luna. |
+| [temper_product.toml](agents/temper_product.toml) | Product documentation, visual checks, bounded browser tasks, and small specified UI fixes with Terra. |
 | [temper_implementer.toml](agents/temper_implementer.toml) | Bounded implementation and checks with Sol. |
 | [temper_analyst.toml](agents/temper_analyst.toml) | Difficult investigation or separate complex review with Astra. |
 | [temper_reviewer.toml](agents/temper_reviewer.toml) | Separate final review with Sol. |

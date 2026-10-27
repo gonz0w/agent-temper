@@ -8,6 +8,9 @@ Before you start, read the current `.agent-temper/SOURCE.md`, its checksum
 manifest, `PROJECT.md`, and the project's policy-change authority. Open a
 bounded update work item in the authorized tracker.
 
+Before editing, record the scope, applicable gates, and authority using the
+[adoption preflight](preflight-adoption.md). Keep that record in the owning issue.
+
 1. **Verify the current copy.** Run its recorded SHA-256 check and inspect the
    file inventory. If files differ, establish why before replacing them. Preserve
    legitimate local changes as explicit policy extensions; do not silently

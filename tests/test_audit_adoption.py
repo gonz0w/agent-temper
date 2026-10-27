@@ -219,6 +219,20 @@ class AdoptionAudit(unittest.TestCase):
         link.symlink_to(self.consumer, target_is_directory=True)
         self.assertIn('unsafe_path', self.codes(self.run_audit(expected=1, extra=('--consumer', str(link)))))
 
+    def test_consumer_and_source_parent_components_cannot_hide_symlinks(self):
+        elsewhere = self.root / 'elsewhere/child'
+        elsewhere.mkdir(parents=True)
+        linked = self.root / 'linked'
+        linked.symlink_to(elsewhere, target_is_directory=True)
+        for field in ('consumer', 'source'):
+            original = getattr(self, field)
+            setattr(self, field, linked / '..' / original.name)
+            with self.subTest(root=field):
+                self.assertIn('unsafe_path', self.codes(self.run_audit(expected=1)))
+            setattr(self, field, original / '..' / original.name)
+            self.assertEqual(self.run_audit()['errors'], [])
+            setattr(self, field, original)
+
     def test_source_and_role_symlinks_are_rejected(self):
         for path in (self.source / 'METHOD.md',
                      self.source / 'templates/codex/agents/temper_product.toml',

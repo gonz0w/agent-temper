@@ -47,6 +47,8 @@ python3 -B temper-source/tools/audit_adoption.py \
 The revision is synthetic; replace it with the reviewed source identity. Absolute
 CLI paths also work from an unrelated working directory. Use physical directory
 paths: inspected roots, parent directories and files must not be symlinks.
+Parent components are retained for physical checking, including those before
+`..`; traversal through real directories remains supported.
 Keep inputs unchanged during the audit. No client or model needs to run.
 
 Expected result for matching synthetic inputs: exit 0, `errors: []`,

@@ -17,11 +17,12 @@ The project adopts the [portable method](../../METHOD.md) at illustrative revisi
 pin with verified retained provenance. No optional forge, agent/model or BSD
 profile is selected. The project has no required policy service or parser.
 
-| Selected module | Canonical home and applicability | Owner |
-| --- | --- | --- |
-| `verification` | [Check map](policy/verification.md), all accepted changes. | Game owner |
-| `execution` | [Execution boundaries](policy/execution.md), all tool/check activity. | Game owner |
-| `integration` | [Delivery and review](policy/integration.md), integration and release. | Game owner |
+The fictional owner explicitly adopts [policy.toml](policy.toml) as the sole
+module selection/reference record: execution, verification and integration.
+It identifies their canonical paths, owner identifier and prerequisites; the
+rule prose remains in those documents. This metadata order grants no precedence
+and needs no parser to read. The optional checker reports declared structure,
+not whether the fictional permission is real or the game works.
 
 These local module bytes are bound by the containing project revision. They have
 no external policy dependency. Rule IDs identify obligations; wording lives in

@@ -16,6 +16,7 @@ policy or permission to perform its example actions.
 | [README](project-readme.md) | Help a reader understand and start using the project. |
 | [How-to](how-to.md) | Guide a reader through one task with observable results. |
 | [Decision](decision.md) | Explain a consequential choice and its alternatives. |
+| [Policy selection](policy-selection.toml) | Optional structured module references for the read-only selection checker; no permission or policy prose. |
 | [Verification policy](verification-policy.md) | Map semantic changes to checks, executors, evidence and delivery gates when a command table is insufficient. |
 | [Method maintenance](method-maintenance.md) | Prepare a precise owner-approved standing boundary for passive method/provenance work. |
 | [Extension](extension.md) | Record a reusable or local rule when a policy paragraph is insufficient. |

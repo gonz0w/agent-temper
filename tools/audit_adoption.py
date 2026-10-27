@@ -181,7 +181,7 @@ class Audit:
             return None
         try:
             value = tomllib.loads(data)
-        except (tomllib.TOMLDecodeError, RecursionError):
+        except (ValueError, RecursionError):
             self.error('invalid_role', location)
             return None
         if (any(not isinstance(value.get(key), str) or not value[key].strip()

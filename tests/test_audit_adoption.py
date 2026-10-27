@@ -181,6 +181,14 @@ class AdoptionAudit(unittest.TestCase):
                 path.write_text(text)
                 self.assertIn('invalid_provenance', self.codes(self.run_audit(expected=1)))
 
+    def test_oversized_toml_integer_is_a_private_json_error(self):
+        for path in (self.consumer / '.codex/agents/temper_product.toml',
+                     self.source / 'templates/codex/agents/temper_product.toml'):
+            path.write_text(ROLE + 'oversized_number = ' + '7' * 5000 + '\n')
+            with self.subTest(location=path.name):
+                self.assertIn('invalid_role', self.codes(self.run_audit(('temper_product',), 1)))
+            path.write_text(ROLE)
+
     def test_role_errors_and_invalid_selected_names(self):
         path = self.consumer / '.codex/agents/temper_product.toml'
         for text in ('malformed[', ROLE.replace('temper_product', 'other'),

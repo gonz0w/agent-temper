@@ -13,6 +13,7 @@ the shared rules and [the project policy](../PROJECT.md) for this repository's c
 
 ## Complete a task
 
+- [Preflight adoption scope and gates](how-to/preflight-adoption.md).
 - [Adopt Agent Temper](how-to/adopt.md).
 - [Update a pinned adoption](how-to/update.md).
 - [Configure optional Codex model routing](how-to/configure-codex.md).

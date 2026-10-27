@@ -10,6 +10,9 @@ or release authority.
 
 ## Before you start
 
+Before editing, record the scope, applicable gates, and authority using the
+[adoption preflight](preflight-adoption.md). Keep that record in the owning issue.
+
 Obtain authorization to adopt the method. Create a bounded adoption work item in
 the project's current tracker. For an existing project, first follow the
 inventory and policy steps in [Retrofit an existing project](retrofit.md).

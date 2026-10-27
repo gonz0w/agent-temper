@@ -6,6 +6,9 @@ product-facing work, complex analysis, and separate review. The core method stay
 
 ## Before you start
 
+Before editing, record the scope, applicable gates, and authority using the
+[adoption preflight](preflight-adoption.md). Keep that record in the owning issue.
+
 Use the project's authorized adoption/update work item. For an existing adoption,
 follow [Update Agent Temper](update.md) to select a reviewed immutable revision
 that includes this profile. For a new adoption, follow [Adopt Agent Temper](adopt.md).

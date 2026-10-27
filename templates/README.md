@@ -16,6 +16,8 @@ policy or permission to perform its example actions.
 | [README](project-readme.md) | Help a reader understand and start using the project. |
 | [How-to](how-to.md) | Guide a reader through one task with observable results. |
 | [Decision](decision.md) | Explain a consequential choice and its alternatives. |
+| [Verification policy](verification-policy.md) | Map semantic changes to checks, executors, evidence and delivery gates when a command table is insufficient. |
+| [Method maintenance](method-maintenance.md) | Prepare a precise owner-approved standing boundary for passive method/provenance work. |
 | [Extension](extension.md) | Record a reusable or local rule when a policy paragraph is insufficient. |
 | [Codex roles](codex/README.md) | Configure optional model routing for bounded subagent work. |
 

@@ -209,7 +209,8 @@ def inspect(root, manifest, as_of):
             'Inputs must remain unchanged; concurrent hostile filesystem mutation is not supported.',
         ],
     }
-    root = Path(os.path.abspath(root))
+    # Preserve parent components so physical checks see any preceding symlink.
+    root = Path(root).absolute()
     if check.directory(root, 'root'):
         path = check.path(root, manifest, 'manifest', '.toml')
         text = check.read(path, 'manifest', MAX_MANIFEST, 'invalid_manifest') if path is not None else None

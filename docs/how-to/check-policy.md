@@ -115,7 +115,9 @@ has at most 64 entries. Paths are at most 512 printable characters with exact
 forward-slash-separated local components: no empty, `.` or `..` component,
 backslash, drive/URI colon, query, fragment or absolute path. File spelling uses
 lowercase `.md`/`.toml` suffixes; use the actual on-disk component spelling.
-Roots, parent directories and inspected files must not be symlinks. Special files
+Roots, parent directories and inspected files must not be symlinks. Root parent
+components are checked physically before simplification, including components
+before `..`; valid traversal through real parent directories remains usable. Special files
 and unreadable inputs fail before policy interpretation. No undeclared files or
 Markdown links are scanned. Case-sensitive spelling depends on the filesystem;
 reader/link review still checks portable names.

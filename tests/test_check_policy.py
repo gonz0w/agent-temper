@@ -153,6 +153,18 @@ class PolicySelection(unittest.TestCase):
         self.project.symlink_to(physical, target_is_directory=True)
         self.assertIn('unsafe_reference', self.codes(self.run_check(1)))
 
+    def test_root_parent_component_cannot_hide_a_symlink(self):
+        elsewhere = self.root / 'elsewhere/child'
+        elsewhere.mkdir(parents=True)
+        linked = self.root / 'linked'
+        linked.symlink_to(elsewhere, target_is_directory=True)
+        original = self.project
+        self.project = linked / '..' / 'project'
+        self.assertIn('unsafe_reference', self.codes(self.run_check(1)))
+        # Real parent components are checked physically and remain usable.
+        self.project = original / '..' / 'project'
+        self.assertEqual(self.run_check()['errors'], [])
+
     def test_date_expiry_is_inclusive_and_event_unverified(self):
         self.manifest.write_text(MANIFEST + EXCEPTION)
         for day in ('2029-01-01', '2030-01-01'):

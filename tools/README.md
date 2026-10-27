@@ -13,6 +13,14 @@ Exit status 0 means the tests and document checks passed. Exit status 1 means at
 least one check failed, or no tests were discovered. Diagnostics identify the
 source file and line.
 
+## Optional adoption auditor
+
+Use the standalone [adoption auditor](../docs/how-to/audit-adoption.md) for an
+explicit, read-only comparison of a consumer bundle and selected role files with
+a trusted local source copy. It is optional and does not run as a consumer audit
+from `verify.py`; the verifier runs only its synthetic fixture tests. It performs
+no network, Git, subprocess or role execution and adds no integration authority.
+
 ## What the checker verifies
 
 The checker reads UTF-8 files whose extension is `.md`, excluding `.git`, `.venv`,

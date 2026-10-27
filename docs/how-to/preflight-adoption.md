@@ -31,6 +31,10 @@ Mandatory local gates remain mandatory until their authorized decision maker
 explicitly changes them. A successful source check does not establish runtime
 routing or product behavior.
 
+The optional [read-only auditor](audit-adoption.md) can supply bounded bundle and
+role observations when local execution policy permits it. Its report does not
+choose applicable gates, authenticate the source, or establish integration authority.
+
 ## Walk the proposed boundary
 
 These cases are fictional. They describe decisions to record, not permission to

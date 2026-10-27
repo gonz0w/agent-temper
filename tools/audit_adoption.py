@@ -210,9 +210,9 @@ def audit(consumer, source, revision, roles):
     }
     if not re.fullmatch(r'[0-9a-f]{40}', revision):
         check.error('invalid_revision', 'arguments')
-    # abspath normalizes CLI input without following symlinks, unlike resolve().
-    consumer = Path(os.path.abspath(consumer))
-    source = Path(os.path.abspath(source))
+    # Retain parents so physical checks see any symlink preceding a '..'.
+    consumer = Path(consumer).absolute()
+    source = Path(source).absolute()
     consumer_ok = check.directory(consumer, 'consumer')
     source_ok = check.directory(source, 'source')
     bundle = consumer / '.agent-temper'

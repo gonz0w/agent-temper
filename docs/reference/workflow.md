@@ -151,8 +151,7 @@ Choose the integration boundary for coherence and reviewability. Multiple issues
 may share one review when they contribute to that outcome. Sharing a milestone
 or touching the same files alone is insufficient. Split for an independent
 outcome, dependency/access boundary or material review/recovery risk; record why.
-Do not delay a ready delivery to accumulate more issues. The
-[bounded-delivery tutorial](../tutorials/bounded-delivery.md) illustrates these decisions.
+Do not delay a ready delivery to accumulate more issues.
 
 The review record states the problem, resulting behavior, acceptance-to-evidence
 mapping, consequential decisions, and remaining limits. Review current integrated

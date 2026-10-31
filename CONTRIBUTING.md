@@ -4,6 +4,10 @@ Start with a bounded [GitHub issue](https://github.com/gonz0w/agent-temper/issue
 Read its comments, the [project policy](PROJECT.md), and the [method](METHOD.md).
 An issue must explain the outcome, scope, acceptance, dependencies, and validation.
 
+Use the [bounded delivery workflow](docs/reference/workflow.md#select-ready-work).
+Related issues may share one PR with explicit membership and completion conditions.
+Record unrelated discoveries for later selection; do not grow an accepted batch.
+
 ## Make a useful change
 
 1. Record a short approach in the issue. Ask about missing policy before affected work.

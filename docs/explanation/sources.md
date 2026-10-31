@@ -42,6 +42,15 @@ reviewed on 2026-10-24. Model routes are starting recommendations, not benchmark
 | [Codex configuration basics](https://learn.chatgpt.com/docs/config-file/config-basic) | Project trust and configuration precedence. |
 | [OpenAI model selection](https://learn.chatgpt.com/docs/model-selection) | Match task difficulty and cost constraints, then evaluate the whole result. |
 
+The bounded delivery guidance uses these primary sources, reviewed on 2026-10-31.
+It selects individual practices rather than claiming full adoption of a framework.
+
+| Source | Selected practice and adaptation |
+| --- | --- |
+| [The Kanban Guide, May 2025](https://kanbanguides.org/the-kanban-guide/2025.5/) | Explicit start/finish policies and work-in-progress control. Temper uses a project-adjustable default per integration lead; it prescribes no universal team capacity or service-level forecast. |
+| [Shape Up: Set Boundaries](https://basecamp.com/shapeup/1.2-chapter-03) | Set outcome and effort boundaries before expanding a solution. Temper retains an authoritative issue backlog and project-specific budgets. |
+| [Shape Up: The Betting Table](https://basecamp.com/shapeup/2.2-chapter-08) | Deliberate selection and a limit on automatic extensions. Temper checkpoints and replans exhausted attempts; it does not impose six-week cycles or waive required quality gates. |
+
 Vendor guidance supplies examples, not required products. The research studies use
 different tasks and setups and do not establish the effect of Agent Temper.
 Official pages can move or restrict automated access. Offline link checks do not

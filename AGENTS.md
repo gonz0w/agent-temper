@@ -8,6 +8,9 @@ explicitly authorizes their adoption work.
 - GitHub Issues own all live work, dependencies, approaches, and continuation.
   Create a bounded issue before implementation; do not maintain local plans or
   progress logs. Keep examples explicitly fictional.
+- Select an explicit delivery batch under PROJECT.md. Related issues may share
+  one PR; give discoveries a disposition before implementation and leave unrelated
+  work for milestone prioritization. Follow the workflow's attempt and stopping rules.
 - Use the [workflow](docs/reference/workflow.md) and [GitHub profile](profiles/github.md).
   Missing or conflicting required policy stops affected work for owner Q&A.
   Recorded decisions persist; routine choices are delegated by PROJECT.md.

@@ -36,6 +36,14 @@ replaces them; they are not all claimed as individual owner questionnaire answer
 
 ## Work selection
 
+For this repository, the owner selects milestone scope and priorities; the lead
+may select ready issues and form a related delivery batch within that scope.
+Each integration lead has one active batch by default, including its review or
+blocked state. Record membership, exclusions and integration acceptance in an
+owning issue or PR. Finish an accepted batch before adding optional work.
+New discoveries remain proposed work until selected under this policy. Follow
+the method's attempt limits; exhaustion never waives required verification.
+
 Use the progress labels in the GitHub profile. `priority:p0` identifies an urgent
 authorized blocker, `priority:p1` current milestone work, and `priority:p2` later
 work. Prioritize existing active work and reviews, then unblocked ready issues in

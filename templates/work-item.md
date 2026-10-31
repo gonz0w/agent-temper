@@ -46,6 +46,19 @@ to a usable result, including necessary failure handling.
 
 {{REQUIRED_CHECKS_DELIVERABLES_AND_ANY_OPERATIONAL_ACCEPTANCE}}
 
+## Delivery boundary and attempts
+
+{{OWNING_BATCH_OR_REVIEW_REFERENCE_INCLUDED_ISSUES_OUTCOME_EXCLUSIONS_AND_LEAD}}
+
+{{APPLICABLE_WIP_POLICY_CHECKS_EXECUTOR_ATTEMPT_LIMIT_AND_STOP_OR_REPLAN_RULE}}
+
+Keep the batch record in one owning work item or review; member issues link to
+it. One issue can be the whole batch. Reference project policy for standing
+limits. A routine focused check can use one run followed by failure inspection;
+costly campaigns need a finite limit. An exhausted limit does not waive acceptance.
+Link unrelated findings for later prioritization rather than adding them to this
+assignment. Record the authority for any changed batch membership or acceptance.
+
 Record the implementation approach, discoveries, actual verification, and
 continuation in the discussion. Identify the checked source revision, exact
 commands or manual procedure, outcomes, and limitations. Never claim an expected

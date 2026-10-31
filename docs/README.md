@@ -6,6 +6,8 @@ the shared rules and [the project policy](../PROJECT.md) for this repository's c
 ## Learn the workflow
 
 - [Take an issue through delivery](tutorials/first-issue.md): a small worked example.
+- [Finish a bounded delivery batch](tutorials/bounded-delivery.md): related issues,
+  discovery disposition, attempt limits and a clear integration boundary.
 - [Take a product idea to its first useful increment](tutorials/first-product.md):
   a fictional discovery, delivery, and feedback exercise.
 - [Walk a Windows game through Temper](tutorials/windows-game.md): a fictional modular policy and development/delivery exercise.

@@ -59,10 +59,13 @@ copying them does not select a process or change permissions.
 | --- | --- |
 | Sole live work tracker | {{TRACKER_AND_LOCATION}} |
 | Priority, readiness, ownership, and dependency rules | {{RULES_OR_PROFILE_REFERENCE}} |
+| Milestone prioritization and discovery disposition authority | {{AUTHORIZED_DECISION_MAKER_AND_REPLANNING_OR_EMERGENCY_RULES}} |
+| Delivery batches and work-in-progress control | {{BATCH_BOUNDARIES_LEAD_AND_WIP_LIMIT_OR_JUSTIFIED_WORKFLOW_DEFAULT}} |
 | Milestone completion conditions | {{CAPABILITY_GATES_OR_WHEN_MILESTONES_APPLY}} |
 | Behavior specification and test-first requirements | {{VERIFICATION_POLICY_AND_EXCEPTION_PROCESS}} |
 | Required checks by change type | {{CHECK_COMMAND_MAP_OR_PATH}} |
 | Real-system or manual validation triggers | {{TRIGGERS_AND_REQUIRED_EVIDENCE}} |
+| Investigation, verification and retry limits | {{STANDING_ATTEMPT_LIMITS_OR_WORK_ITEM_DECISION_RULE_AND_REPLAN_AUTHORITY}} |
 | Documentation structure and writing style | {{DOCUMENTATION_POLICY}} |
 | Definition of completion | {{ACCEPTANCE_REVIEW_AND_DELIVERY_CONDITIONS}} |
 

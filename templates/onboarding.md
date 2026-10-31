@@ -47,6 +47,12 @@ work while a required answer is pending; do not proceed with dependent work.
 - Where is the sole live work tracker? How are priority, readiness, blockers,
   milestones, and ownership represented?
 - May agents create work items and propose scope? Which work is authorized to start?
+- Who selects milestone work and reprioritizes discoveries? What triggers an
+  earlier blocker or emergency decision, and what is delegated to agents?
+- Which issues may share a delivery batch, who owns integration, and does the
+  workflow's default of one active batch per integration lead fit this project?
+- What bounds investigations, costly verification and retries? Who may replan an
+  exhausted attempt, and which required gates remain binding?
 - Which routine implementation choices are delegated?
 - If model routing would help, which roles, available models, effort settings,
   resource limits, and fallbacks apply? Who may change them, and how will actual

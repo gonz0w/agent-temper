@@ -19,6 +19,7 @@ the method requires no installed tool, service, or agent framework.
 | --- | --- |
 | Understand the method | [The core method](METHOD.md) |
 | See a complete example | [Take an issue through delivery](docs/tutorials/first-issue.md) |
+| Keep related work on track | [Finish a bounded delivery batch](docs/tutorials/bounded-delivery.md) |
 | Turn a product idea into useful work | [Discover and validate a product increment](docs/how-to/discover-product.md) and [first-product tutorial](docs/tutorials/first-product.md) |
 | Set up a project | [Adopt Agent Temper](docs/how-to/adopt.md) and [onboarding questions](templates/onboarding.md) |
 | Improve an existing repository | [Retrofit a project](docs/how-to/retrofit.md) |

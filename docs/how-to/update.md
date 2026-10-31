@@ -28,6 +28,10 @@ replace local gates or verify runtime routing.
    extension dependencies, compatibility, local mappings, and verification. New
    files in the candidate bundle do not select new profiles. Record deliberate
    supersession where a previous decision changes.
+   For workflow updates, reconcile active batch membership, ownership, WIP and
+   attempt limits against the new rules. Preserve current branches and evidence;
+   do not discard work, reset budgets or apply expired exceptions to force a fit.
+   Use a recorded transition when inherited work exceeds the selected WIP limit.
 4. **Prepare the candidate separately.** Follow the copy procedure in
    [Adopt Agent Temper](adopt.md) from an empty disposable directory. Preserve
    the bundle paths and generate a new `SOURCE.md` and `SHA256SUMS`. Compare its
@@ -41,6 +45,9 @@ replace local gates or verify runtime routing.
    If selecting or updating Codex routing, follow [Configure Codex](configure-codex.md).
    Merge adapted `.codex/agents/` files separately from the upstream bundle; a
    bundle update does not install roles or change the active chat's model.
+   Check the actual agent entry point and work/review templates too: retained
+   guidance is ineffective if active instructions still select competing rules.
+   Link the canonical workflow rather than copy its full text into every file.
 6. **Verify the result.** Check the manifest and inventory, follow internal links
    offline, and walk a representative ready work item through the revised
    rules. Run any local checks affected by the change. Record actual results

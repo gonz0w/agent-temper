@@ -23,6 +23,8 @@ the shared rules and [the project policy](../PROJECT.md) for this repository's c
 - [Audit an adoption without changing it](how-to/audit-adoption.md).
 - [Update a pinned adoption](how-to/update.md).
 - [Configure optional Codex model routing](how-to/configure-codex.md).
+- [Evaluate optional context tools](how-to/evaluate-context-tools.md): caching,
+  compaction and symbol navigation without changing the quality bar.
 - [Retrofit an existing repository](how-to/retrofit.md).
 - [Write documentation](how-to/write-documentation.md).
 - [Discover and validate a product increment](how-to/discover-product.md).

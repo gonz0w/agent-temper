@@ -136,6 +136,13 @@ undefined. Unavailable usage or prices are not zero: report the gap and avoid a
 monetary savings claim that depends on it. Keep elapsed time separate from summed
 agent effort, particularly when work overlaps.
 
+Preserve each provider's usage definitions. Cached input is often a subset of
+input, and reasoning usage may be included in output; do not count a subset twice.
+Separate measured API charges, subscription usage limits and local operating
+costs. Fewer tokens or a higher cache-hit rate does not by itself establish a
+lower bill. Include setup and maintenance when comparing an optional local model
+or harness. Record unavailable measures instead of estimating them as observations.
+
 Check validated findings, missed known defects, false positives, severity accuracy,
 and review corrections alongside acceptance. More findings can mean more noise;
 fewer can mean missed defects. Agent agreement can share a mistake. An author's

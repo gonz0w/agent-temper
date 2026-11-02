@@ -36,11 +36,16 @@ to a usable result, including necessary failure handling.
 
 ## Context and dependencies
 
+- Start here: {{RELEVANT_SOURCE_PATHS_SYMBOLS_AND_CHECK_COMMAND_REFERENCES}}
 - Governing contracts: {{CURRENT_DOCUMENT_OR_DECISION_REFERENCES}}
 - Prerequisites: {{ACTUAL_BLOCKING_WORK_ITEMS_OR_NONE}}
 - Capability milestone: {{MILESTONE_OR_NOT_APPLICABLE}}
 - Ownership and priority: {{TRACKER_FIELDS_OR_RECORDED_VALUES}}
 - Consequential permissions: {{POLICY_REFERENCE_OR_REQUIRED_DECISION}}
+
+Keep this context scoped to the deliverable. Link canonical facts instead of
+copying whole documents. Required project instructions and applicable policies
+still govern; expand context when the changed contract or evidence needs it.
 
 ## Evidence to provide
 

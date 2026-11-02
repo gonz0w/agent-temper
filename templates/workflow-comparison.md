@@ -11,12 +11,16 @@ Complete the design before execution; leave results unavailable until observed.
 | Baseline and candidate | {{CONFIGURATIONS_AND_CHANGED_FACTOR}} |
 | Matched work and inputs | {{TASK_GROUPS_SOURCE_REVISIONS_AND_ENVIRONMENT}} |
 | Expected results and quality floor | {{INDEPENDENT_REFERENCE_AND_ACCEPTANCE}} |
-| Evaluation separation | {{TUNING_VERSUS_EVALUATION_CASES_OR_LIMIT}} |
+| Evaluation separation | {{TUNING_EVALUATION_CASES_VISIBLE_INPUT_REVIEW_AND_LIMITS}} |
 | Decision rule | {{REQUIRED_BENEFIT_WITH_QUALITY_PRESERVED}} |
 | Authority and attempt | {{OWNER_PERMITTED_TOOLS_DATA_BUDGET_AND_STOP_RULE}} |
 
 Use the simplest adequate baseline. Keep required checks and review equal.
 Identify unavailable runtime configuration or measurement before relying on it.
+Record who independently checked the worker's visible inputs, including required
+policy, for exposed answers. Keep contaminated cases and costs as development or
+feasibility evidence; exclude them from held-out support without silently adding
+replacement runs or budget.
 
 ## Observations and decision
 

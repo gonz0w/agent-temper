@@ -120,6 +120,24 @@ where relevant, and allowed review corrections. Use separately checked expected
 results; record gaps in that reference. Decide what improvement would justify a
 change while preserving required quality, checks, and review.
 
+Before model execution, have a reviewer independent of the evaluated worker
+examine its complete visible inputs for answers: instructions, policy overlays,
+examples, tests and later source can expose an expected result. Record the input
+identities, permitted reference material and separation limits. Preserve required
+policy reading. If necessary material exposes the answer, choose another case or
+classify the case as development or feasibility work. This review can find
+leakage; it does not guarantee independence.
+
+If exposure is discovered after execution, retain the runs and their costs and
+exclude them from held-out evaluation support. Do not silently replace them or
+renew the trial budget. New inputs need a reviewed scope and budget decision
+under the project's authority.
+
+**Fictional example:** A policy overlay includes the corrected document used in a
+historical repair task. Before spending the trial budget, a separate reviewer
+classifies that task as development evidence. The lead selects a different
+evaluation case under the recorded scope and budget.
+
 Compare matched inputs under recorded conditions. Identify task and source
 revisions, requested and observed model/effort, client, tools, environment, and
 resource bounds. Keep tuning examples separate from evaluation where practical.

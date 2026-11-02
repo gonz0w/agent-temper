@@ -173,3 +173,7 @@ Assess benefit on representative work using the profile's evaluation guidance.
 This kit provides routing defaults, not measured savings. Revisit settings with
 client/model changes. Each existing repository needs its own explicit update;
 an upstream merge or a new chat alone does not change its adopted pin or policy.
+
+For caching, compaction or symbol navigation, use
+[Evaluate optional context tools](evaluate-context-tools.md). Check actual client
+support and task outcomes before adding another integration or changing defaults.

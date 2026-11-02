@@ -11,6 +11,7 @@ policy or permission to perform its example actions.
 | [Agent entry point](AGENTS.md) | Route an agent to current policy, work, and checks. |
 | [Work item](work-item.md) | Define a bounded outcome in the authoritative tracker. |
 | [Review](review.md) | Explain the result and map acceptance to actual evidence. |
+| [Workflow comparison](workflow-comparison.md) | Define and report a bounded model, context, tool or harness trial in its owning work item. |
 | [Repository map](repository-map.md) | Link the code, contracts, and checks needed to trace a behavior. Use only where orientation needs help. |
 | [Release record](release.md) | Identify a delivery candidate, executable checks, recovery, and actual acceptance. |
 | [README](project-readme.md) | Help a reader understand and start using the project. |

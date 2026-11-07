@@ -48,6 +48,38 @@ It adds no dependency or core-method runtime. API calls, credential setup, local
 model installation, spending, default changes and consumer rollout remain outside
 this selection. Existing review, verification and integration authority applies.
 
+## Optional Codex advisory backend
+
+On 2026-11-07 the owner selected the existing Codex client for the live advisory
+adapter and deferred local models. This replaces the earlier live-adapter deferral
+for this bounded increment. Keep the core method and other projects tool-neutral.
+No Platform API keys, direct paid API, local-model installation or persistent
+client-default changes are selected.
+
+The optional backend uses explicit per-invocation subscription opt-in, existing
+ChatGPT sign-in and an owned context-only directory. Its isolated client invocation
+ignores personal model/plugin configuration, disables command/image/web/app/plugin
+and multi-agent tools, memory use/generation and automatic skill instructions, and
+requests a read-only worker with no approvals. Existing
+managed requirements, execpolicy rules and credentials remain with the client.
+This exception applies to the advisory invocation only; repository checks, hooks
+and contributor instructions remain required for development work.
+
+Use the appropriate [Codex route defaults](profiles/codex.md) for bounded
+assignments: workflow for routine inspection, implementer for code, reviewer for
+separate examination, and analyst for difficult unresolved work. The advisory
+backend defaults to Luna/medium. Select a stronger model explicitly when its
+question warrants it, bind that choice in the request, and preserve the same gates.
+Do not add a model call to a trivial lead decision or silently escalate/retry after
+failure. This policy does not change the primary chat model or consumer roles.
+
+The selected delivery includes at most three one-attempt fictional Luna functional
+requests, each bounded to 60 seconds of work plus local cleanup, after separate
+input/source review. This is ordinary confirmation of the owner-requested working
+adapter, not a new comparative campaign or renewal of the stopped compaction trial.
+Tests and the default demonstration remain offline. Report unavailable runtime
+metadata and baseline costs; no savings claim follows from model choice alone.
+
 ## Work selection
 
 For this repository, the owner selects milestone scope and priorities; the lead

@@ -25,8 +25,8 @@ the shared rules and [the project policy](../PROJECT.md) for this repository's c
 - [Configure optional Codex model routing](how-to/configure-codex.md).
 - [Evaluate optional context tools](how-to/evaluate-context-tools.md): caching,
   compaction and symbol navigation without changing the quality bar.
-- [Try the offline decision-assistance contract](../examples/decision-assistance/README.md):
-  fixed fictional advice, replay and failure handling without a model.
+- [Try optional decision assistance](../examples/decision-assistance/README.md):
+  offline advice/replay checks and an opt-in Codex client backend.
 - [Retrofit an existing repository](how-to/retrofit.md).
 - [Write documentation](how-to/write-documentation.md).
 - [Discover and validate a product increment](how-to/discover-product.md).

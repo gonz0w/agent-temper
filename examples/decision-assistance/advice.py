@@ -22,6 +22,10 @@ RECORD_FIELDS = {'contract_version', 'request_key', 'provenance', 'status', 'rou
 OBSERVATION_FIELDS = {'uncertainty', 'usage', 'latency_ms'}
 
 
+class BackendUnavailable(Exception):
+    """The selected backend cannot run within the caller's current authority."""
+
+
 def _json(value, limit=None):
     def check(item, depth=0):
         if depth > 12:
@@ -160,6 +164,8 @@ def evaluate(request, backend=None, *, replay=None, clock=time.monotonic):
     inner = copy.deepcopy(request)
     try:
         response = backend(inner, deadline)
+    except BackendUnavailable:
+        return _record(request, reason='unavailable')
     except TimeoutError:
         return _record(request, reason='timeout', origin='fresh')
     except Exception:

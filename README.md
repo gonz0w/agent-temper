@@ -55,9 +55,9 @@ for capability goals.
 
 The repository contains original guidance, reusable Markdown and optional Codex
 configuration templates, and small Python checks. An
-[optional offline decision-assistance example](examples/decision-assistance/README.md)
-exercises a JSON adapter boundary with fixed fictional answers. The repository
-does not contain an agent runtime, a hosted documentation stack, or a required
+[optional decision-assistance example](examples/decision-assistance/README.md)
+offers an offline fixed-answer demonstration and an opt-in Codex client backend.
+The repository does not contain an agent runtime, a hosted documentation stack, or a required
 collection of development tools.
 
 ## Validate a checkout

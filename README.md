@@ -54,8 +54,11 @@ for current assignments and [milestones](https://github.com/gonz0w/agent-temper/
 for capability goals.
 
 The repository contains original guidance, reusable Markdown and optional Codex
-configuration templates, and small Python checks. It does not contain an agent
-runtime, a hosted documentation stack, or a required collection of development tools.
+configuration templates, and small Python checks. An
+[optional offline decision-assistance example](examples/decision-assistance/README.md)
+exercises a JSON adapter boundary with fixed fictional answers. The repository
+does not contain an agent runtime, a hosted documentation stack, or a required
+collection of development tools.
 
 ## Validate a checkout
 

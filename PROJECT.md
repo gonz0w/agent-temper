@@ -34,6 +34,20 @@ replaces them; they are not all claimed as individual owner questionnaire answer
 | Documentation | Reader-oriented structure with original STE-informed plain-English procedures. No formal ASD-STE100 compliance claim. |
 | Standards adoption | This repository develops the method in METHOD.md. Consumers pin an immutable reviewed revision; upstream changes never silently change them. |
 
+## Optional offline examples
+
+On 2026-11-07 the owner selected the decision-assistance contract, deterministic
+fake backend, tests and guidance as an optional Python standard-library example.
+This bounded prototype may precede completion of external consumer migration
+acceptance. It replaces the original after-migration sequencing only for that
+offline increment. The live provider adapter and real-use evaluation remain
+separately selected work under issue #15.
+
+The example does not activate routing, inference, a service or a consumer profile.
+It adds no dependency or core-method runtime. API calls, credential setup, local
+model installation, spending, default changes and consumer rollout remain outside
+this selection. Existing review, verification and integration authority applies.
+
 ## Work selection
 
 For this repository, the owner selects milestone scope and priorities; the lead

@@ -63,10 +63,23 @@ without checking outcomes.
 ## 4. Check symbol coverage and freshness
 
 Check the integration's language support, build flags, project root, index scope
-and readiness. A tool may cover open files while missing other project files.
+and readiness. For C/C++, supply the project's actual compilation database when
+available. A tool may cover open files while missing other project files. Open-file
+readiness does not establish that background indexing has finished. Check the
+backend's supported completion signal for the scope being tested.
+
 Compare results with independently identified declarations, definitions and
-callers. Include unrelated names, comments and strings. Change a caller and check
-that new locations appear and obsolete locations disappear.
+callers. Check declaration and definition queries as well as references; one
+successful lookup does not establish the other coverage. Include unrelated names,
+comments and strings. Compare canonical full file identities and locations, not
+basenames or raw result counts. Filesystem aliases can produce duplicate results;
+files with the same basename can still contain different references.
+
+Change a caller and check that new locations appear and obsolete locations
+disappear. Associate readiness with that edited source version. A queued idle
+notification from an earlier version is insufficient. If versioned diagnostics
+are the chosen signal, negotiate support and require the expected version. Record
+unavailable readiness instead of assuming that a fast response is current.
 
 Inspect surrounding contracts and search for configuration, generated or dynamic
 references that the symbol tool may miss. Verify a proposed rename separately;
@@ -74,6 +87,10 @@ a reference lookup does not prove rename safety. Keep text search available when
 the tool is absent, incomplete or slower to prepare than the task warrants.
 
 For C/C++, [clangd describes its navigation features](https://clangd.llvm.org/features).
+Its [indexing design](https://clangd.llvm.org/design/indexing) distinguishes open-file
+information from background project coverage; its
+[missing-reference guidance](https://clangd.llvm.org/faq#why-does-clangd-not-return-all-references-for-a-symbol)
+also identifies build context and result limits.
 [Serena](https://oraios.github.io/serena/01-about/025_features.html) offers optional
 agent-facing symbol tools, but its [installation and language dependencies](https://oraios.github.io/serena/02-usage/010_installation.html)
 are additional project choices. An integration layer does not establish backend

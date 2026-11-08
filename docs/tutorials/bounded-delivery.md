@@ -60,6 +60,13 @@ focused export/preservation regressions, documentation checks, required assemble
 source checks and a separate reviewer. A routine check runs once, then the lead
 inspects any failure. A costly native campaign is outside this source batch.
 
+The fictional checkpoint is the complete export flow: writer, error handling and
+instructions. Establish required RED expectations first, then implement related
+parts across L-11 through L-13 before the focused regression/documentation checks.
+Do not run an assembled suite or request a review after each file or issue. At the
+completed source batch, run the applicable delivery gates and final review. A new
+data-loss risk or a stricter project rule can require an earlier check.
+
 Suppose a focused test exposes the truncation defect. The lead repairs it and
 reruns affected checks within delegated authority. Suppose instead the required
 executor is unavailable. The lead records that block and continues only independent
@@ -95,6 +102,12 @@ A native factory can use objective and change IDs, immutable candidate compositi
 durable checkpoints and policy-authorized promotion instead of GitHub issues and
 PRs. A local tracker can use its own work and review records. Each maps the same
 batch, disposition, evidence and authority rules; no agent vendor or forge is required.
+
+The same cadence works for a fictional onboarding guide: related issues cover
+setup, recovery and examples in one usable document change. Develop those sections
+together, check their shared links and procedure at a coherent checkpoint, then
+obtain the required final reader review. Unit tests apply only if the deliverable
+includes behavior that needs them; the tracker and agreed acceptance remain.
 
 During adoption, inspect existing ownership, branches, batches and mandatory gates.
 Record how unfinished work transitions without discarding it or silently renewing

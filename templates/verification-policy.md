@@ -19,6 +19,13 @@ Link the canonical command contract; avoid copied scripts or duplicated pins.
 
 {{CHANGE_CLASSES_CHECKS_EXECUTORS_AND_EXPECTED_RESULTS}}
 
+Separate focused development checkpoints from required assembled-delivery gates.
+Record which coherent changes may be developed together before checks, what
+triggers an immediate check and which changed inputs invalidate existing evidence.
+Reference the [portable cadence](../docs/reference/verification.md#keep-feedback-fast-and-sufficient);
+no universal issue count or timer determines the boundary. Do not add a separate
+report or approval step for every edit when the existing work record suffices.
+
 Inspect the actual diff. Distinguish source inspection, executable/configuration,
 product/data, authority and delivery changes. Unknown impact uses the declared
 conservative path until investigated. Keep meaningful test-first expectations for

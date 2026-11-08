@@ -64,6 +64,7 @@ copying them does not select a process or change permissions.
 | Milestone completion conditions | {{CAPABILITY_GATES_OR_WHEN_MILESTONES_APPLY}} |
 | Behavior specification and test-first requirements | {{VERIFICATION_POLICY_AND_EXCEPTION_PROCESS}} |
 | Required checks by change type | {{CHECK_COMMAND_MAP_OR_PATH}} |
+| Development checkpoints and delivery-gate cadence | {{COHERENT_SLICES_FOCUSED_CHECKS_DELIVERY_GATES_AND_INVALIDATION_RULES}} |
 | Real-system or manual validation triggers | {{TRIGGERS_AND_REQUIRED_EVIDENCE}} |
 | Investigation, verification and retry limits | {{STANDING_ATTEMPT_LIMITS_OR_WORK_ITEM_DECISION_RULE_AND_REPLAN_AUTHORITY}} |
 | Documentation structure and writing style | {{DOCUMENTATION_POLICY}} |
@@ -93,6 +94,13 @@ when the project does not use model routing.
 
 Specify **allowed**, **ask first**, or **prohibited**, with conditions. A tool's
 technical access does not itself authorize an action.
+
+Where useful, authorize a complete bounded outcome once, including routine
+corrections, check cadence, effort limits and recovery. Reuse that recorded
+authority within its scope; ask again for a new boundary, conflict or exhausted
+limit, rather than each already-covered step. Existing permissions and required
+gates still apply. Do not turn a consumer's local restriction into a universal
+permission rule for unrelated projects.
 
 | Action | Decision and conditions |
 | --- | --- |

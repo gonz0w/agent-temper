@@ -82,6 +82,14 @@ metadata and baseline costs; no savings claim follows from model choice alone.
 
 ## Work selection
 
+The owner's 2026-11-07 direction selects generic economical delivery defaults:
+related issue batches, coherent development checkpoints, required delivery gates,
+milestone discipline and lower unnecessary coordination/context overhead. Keep
+the method applicable to any future project. Consumer-specific integration and
+infrastructure constraints remain local; promote only a portable lesson with a
+meaningful benefit. This direction selects no new inference benchmark, mandatory
+runtime, consumer rollout or release, and claims no measured savings.
+
 For this repository, the owner selects milestone scope and priorities; the lead
 may select ready issues and form a related delivery batch within that scope.
 Each integration lead has one active batch by default, including its review or

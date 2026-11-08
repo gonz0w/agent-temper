@@ -10,7 +10,9 @@ explicitly authorizes their adoption work.
   progress logs. Keep examples explicitly fictional.
 - Select an explicit delivery batch under PROJECT.md. Related issues may share
   one PR; give discoveries a disposition before implementation and leave unrelated
-  work for milestone prioritization. Follow the workflow's attempt and stopping rules.
+  work for milestone prioritization. Use coherent development checkpoints and
+  focused checks; run required delivery gates on the assembled batch. Follow the
+  workflow's attempt and stopping rules.
 - Use the [workflow](docs/reference/workflow.md) and [GitHub profile](profiles/github.md).
   Missing or conflicting required policy stops affected work for owner Q&A.
   Recorded decisions persist; routine choices are delegated by PROJECT.md.

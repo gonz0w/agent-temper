@@ -30,6 +30,8 @@ the recorded decision maker. That role may be a person or an authorized agent.
    share one integration; neither an issue nor a delivery grows automatically
    when an agent discovers more work. Recording a finding does not authorize
    implementation or reprioritization. Do not extend finished acceptance with upgrades.
+   By default, deliver related ready issues as one coherent batch; an issue, edit
+   or commit is not automatically a test, review or merge boundary.
 3. **Resolve project policy once.** Ask the authorized decision maker about a
    missing or conflicting required decision before affected work. Record the answer. Apply it in later
    sessions without asking again. Change it only through an explicit authorized
@@ -48,6 +50,9 @@ the recorded decision maker. That role may be a person or an authorized agent.
    historical results as fresh tests. Bound investigations and verification
    attempts; stop when the required evidence is sufficient or the recorded
    limit is reached. A limit cannot waive an unmet gate.
+   Use focused development checkpoints and the required gates for the assembled
+   delivery. Refresh evidence when relevant inputs change or project policy
+   requires it; avoid repeating unaffected checks for administrative updates.
 7. **Deliver for people.** Update the affected user instructions, reference, and
    examples with the behavior. Keep changes readable, explain consequential
    choices, and provide setup, recovery, and support limits where relevant.

@@ -41,10 +41,24 @@ stricter test-first policy for particular changes.
 
 ## Keep feedback fast and sufficient
 
-Run focused checks during iteration, then the required checks for changed contracts
-and their consumers before integration. Use broader platform, security, recovery,
-and release checks when the change or project policy requires them. Unknown impact
-is a reason to investigate or broaden checks, not to assume no impact.
+Choose checkpoints by coherent behavior and consequence. A development window can
+cover several related files or ready member issues before its focused checks.
+Do not automatically run the full suite after every save, commit or issue. A
+project's stricter test-first or earlier-check requirement still applies.
+
+| Boundary | Default check cadence |
+| --- | --- |
+| Before a behavior change | Specify expected results and run the required reproduction or test-first RED. |
+| During a coherent implementation slice | Develop the related change; check immediately if policy, uncertainty or new risk requires it. |
+| At its development checkpoint | Run focused changed-contract checks; inspect failures before further work. |
+| At the assembled delivery boundary | Run all applicable required integration gates and obtain separate final review. |
+| After a correction or changed input | Refresh affected checks and review; reuse unaffected evidence only within its valid scope and required CI policy. |
+| At milestone reconciliation | Assess delivered capability and outstanding findings; select later work instead of accumulating optional checks. |
+
+Use broader platform, security, recovery and release checks when the changed
+contracts or project policy require them. Unknown impact is a reason to investigate
+or broaden checks, not to assume no impact. A successful focused checkpoint alone
+does not establish integration or operational acceptance.
 
 Document a stable local check entry point. CI should call the same maintained
 commands where practical. Optional hooks are convenience checks; a bypassable hook
@@ -104,6 +118,11 @@ more durable artifacts. Protect private data, credentials, and sensitive finding
 Zero discovered tests are not a passing test suite. A timeout or infrastructure
 error is not an assertion result. Source hashes establish identity; they do not
 prove correctness. A check of a saved report does not rerun the product test.
+
+For ordinary work, a compact acceptance-to-result record is sufficient. Link the
+standing command contract and retained output; do not copy the full policy, log
+or previous review into every checkpoint. Stronger traceability can be required by
+the project's risk and evidence policy. This changes reporting cost, not truth.
 
 Historical evidence remains tied to the bytes and conditions actually measured.
 Keep those inputs resolvable through retained source revisions or artifacts before

@@ -91,11 +91,41 @@ A blocked item names the blocker and what would remove it. Deferred work is not
 current authorization. If no ready work is authorized, ask the owner to choose or
 clarify it; do not invent a product direction.
 
+Keep consumer constraints local. One project's executor, hosting, credentials or
+integration blocker does not become a universal method prerequisite. Promote a
+lesson into the framework only when it solves a portable problem with enough
+value to justify its cost. Preserve the consumer's unmet acceptance separately;
+independent framework work follows its own recorded priority and authority.
+
 ## Implement and coordinate
 
 Inspect current source and relevant tests. Establish expected behavior before
 changing it. Use the [verification reference](verification.md) for the change type.
 Implement the smallest complete outcome and update affected documentation.
+
+### Default development loop
+
+Use the project's standing check map and authority. Keep the batch outcome,
+included work, next development checkpoint, delivery gates and stopping boundary
+in its existing owning work item; a small batch needs only a few lines.
+
+1. Implement a coherent behavior slice across related files or ready member
+   issues. An issue boundary alone does not require a new PR, full suite or review.
+   Preserve required test-first reproduction before changing behavior.
+2. At the slice's checkpoint, run the smallest checks that establish its changed
+   contracts. Repair current acceptance defects within delegated scope. Record
+   unrelated bugs and optimizations for milestone prioritization, then continue.
+3. When the selected batch is complete, run its required delivery gates and obtain
+   the separate final review. Continue ready member work without asking permission
+   for each routine step already covered by the recorded authority.
+4. Refresh checks and review for affected inputs or material findings. Once the
+   batch is accepted, integrate and reconcile issues and milestone exit criteria.
+   Do not add optional work to a finished delivery.
+
+Project rules can require earlier checkpoints or stronger gates. A risky or
+unknown impact can trigger checks immediately; this loop never postpones a
+required check or authorizes an unselected issue. Use the
+[verification cadence](verification.md#keep-feedback-fast-and-sufficient).
 
 ### Choose the work approach
 

@@ -20,6 +20,12 @@ the project's work-in-progress limit. Multiple related issues may share one
 integration; discovering another issue does not authorize adding it. Record a
 disposition for findings and leave unrelated work for milestone prioritization.
 
+Default to the [development loop]({{FRAMEWORK_PATH}}/docs/reference/workflow.md#default-development-loop):
+implement coherent related slices, run focused checks at their checkpoints, and
+run required delivery gates with the final batch review. Continue ready member
+work without a PR, full-suite run or approval request for each issue or edit.
+Preserve stricter local checks, test-first rules and actual permission boundaries.
+
 Record execution discoveries and handoffs in that work item. Keep durable behavior
 and decisions in the documentation. Do not create a second backlog or status log.
 
@@ -39,6 +45,11 @@ suitable bounded work. Supply the work item, applicable policy, source context,
 acceptance, and edit boundaries. Follow its escalation and fallback rules. The
 lead verifies returned evidence and owns integration; do not assume a requested
 model ran without runtime evidence.
+
+Use deterministic tools for mechanical facts and keep small coupled work with
+the lead. Add a model call or delegate only for a defined question whose value
+justifies briefing, repeated context and integration cost. Use recorded routes
+and fallbacks; unavailable usage is not zero cost.
 
 ## Delivery
 

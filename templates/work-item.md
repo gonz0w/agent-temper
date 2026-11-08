@@ -1,5 +1,9 @@
 # {{DELIVERABLE_TITLE}}
 
+For a small change, keep only outcome, scope, acceptance/check references and the
+batch boundary. Remove unused sections; link standing policy instead of copying
+it. This template is a starting point, not a required form for every issue.
+
 ## Outcome
 
 {{WHO_NEEDS_WHAT_AND_OBSERVABLE_BENEFIT}}
@@ -56,6 +60,12 @@ still govern; expand context when the changed contract or evidence needs it.
 {{OWNING_BATCH_OR_REVIEW_REFERENCE_INCLUDED_ISSUES_OUTCOME_EXCLUSIONS_AND_LEAD}}
 
 {{APPLICABLE_WIP_POLICY_CHECKS_EXECUTOR_ATTEMPT_LIMIT_AND_STOP_OR_REPLAN_RULE}}
+
+For the owning batch, add a compact cadence when standing policy is insufficient:
+next coherent implementation checkpoint and focused checks; assembled delivery
+gates and review; inputs that invalidate reuse. Member issues link to this one
+record. Several related issues may be implemented before that focused checkpoint;
+required test-first reproduction and earlier risk checks still apply.
 
 Keep the batch record in one owning work item or review; member issues link to
 it. One issue can be the whole batch. Reference project policy for standing

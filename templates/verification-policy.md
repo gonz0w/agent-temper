@@ -26,6 +26,11 @@ Reference the [portable cadence](../docs/reference/verification.md#keep-feedback
 no universal issue count or timer determines the boundary. Do not add a separate
 report or approval step for every edit when the existing work record suffices.
 
+Record which results the integration system can carry forward and when a partial
+rerun is supported. Link the command evidence and the required gate result when
+they are separate. Use the [reuse procedure](../docs/reference/verification.md#reuse-evidence-after-a-change)
+to record retained results and fresh checks in the existing batch.
+
 Inspect the actual diff. Distinguish source inspection, executable/configuration,
 product/data, authority and delivery changes. Unknown impact uses the declared
 conservative path until investigated. Keep meaningful test-first expectations for

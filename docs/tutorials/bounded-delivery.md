@@ -80,7 +80,22 @@ on those checks. A limit is a reason to replan, never permission to skip a gate.
 **Check:** Check selection can respond to evidence. Neither the initial plan nor
 an exhausted budget allows the agent to ignore a relevant unmet requirement.
 
-## 4. Review and finish
+## 4. Refresh evidence after review or interruption
+
+Lantern's check map identifies the inputs to each check. The batch record can
+hold a few lines like these fictional examples.
+
+| Event | Record in the batch |
+| --- | --- |
+| The reader corrects a typo in an explanation that tests and examples do not consume | Refresh the affected reader and documentation checks. Link the export regression result and explain that its inputs are unchanged. Obtain each required gate for the corrected candidate. |
+| The serializer contract changes | Refresh writer and error-handling checks that depend on it. Return the changed contract and results to the reviewer. |
+| Export assertions pass before the required job loses its connection | Keep the assertion result and the failed job conclusion. Verify the prior work has stopped. If the recorded allowance and integration system support it, rerun only that job on the same candidate. Confirm its new conclusion and the validity of the other required gates. |
+
+Use the [evidence reuse procedure](../reference/verification.md#reuse-evidence-after-a-change)
+to decide what to retain. Record an interrupted gate as unmet until the integration
+system accepts a current result.
+
+## 5. Review and finish
 
 One fictional PR contains L-11 through L-14. Its description names the batch,
 maps each issue's acceptance to actual evidence in a real implementation, links
@@ -96,7 +111,7 @@ or claim a healthy installed release from source evidence.
 **Check:** Completion follows the previously recorded boundary. If native execution
 were an integration requirement, the same source-only result would remain blocked.
 
-## 5. Apply the same method with another work system
+## 6. Apply the same method with another work system
 
 A native factory can use objective and change IDs, immutable candidate compositions,
 durable checkpoints and policy-authorized promotion instead of GitHub issues and

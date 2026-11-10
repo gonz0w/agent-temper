@@ -39,9 +39,20 @@ If a required decision is missing, pause only work that depends on it.
 | Acceptance and failure evidence | Keep the compact command/result record, source/input identity, relevant diagnostics and reproduction material for the required review, support and recovery period. Preserve failed, cancelled and inconclusive outcomes; never keep only the latest success. |
 | Rebuildable intermediates | Use an owned temporary/output location. After the run and required evidence capture, remove only what the current authority permits. Retain the rebuild recipe and necessary input identities; do not call a file reproducible when its inputs or tools are unavailable. |
 | Immutable downloads and installation media | Prefer one verified canonical copy per required content identity in an authorized location. Record origin, version and digest. Reuse compatible inputs instead of copying them into every dated run. |
-| Compiler and dependency caches | Use supported cache locations and eviction controls with a finite budget. Share only where toolchain, target, trust and concurrency rules permit; isolate incompatible or untrusted inputs. A cache is not the sole copy of source or evidence. |
+| Compiler and dependency caches | Inspect their contents before eviction, then use supported controls with a finite budget. Share only where toolchain, target, trust and concurrency rules permit; isolate incompatible or untrusted inputs. A cache must not be the sole retained copy of source or evidence. |
 | VM images, snapshots and overlays | Treat the complete backing chain as a dependency set. Retain every base referenced by a surviving image and every image needed for active work, debugging, release or recovery. A dated directory or an inactive VM is not evidence of independence. |
 | Worktrees and version-control storage | Preserve dirty work, local-only history, active owners and recovery data. Use supported inspection and maintenance commands; never delete object packs, indexes or administrative directories by hand. |
+
+A cache directory can contain more than rebuildable cache entries. Preserve fuzz
+corpora, regression seeds, crash reproducers and retained executables or other
+products even when nested under a cache root. Inspect the candidate tree and
+classify those contents by purpose, ownership and retention need before eviction;
+being generated does not prove they can be reproduced. Keep them until their own
+retention conditions and authorized disposition are established. A supported
+cache-cleaning command is not safe merely because the tool provides it. If it
+cannot exclude protected contents, hold the affected eviction until an authorized
+preservation plan protects the bytes and verifies their references. Do not move,
+delete or rerun a retained product just to classify it.
 
 Before removing a duplicate, verify content identity, references and the retained
 copy's usability. Matching names or sizes do not prove equality. For large files,
@@ -120,7 +131,9 @@ run awaiting review and an older successful run. The overlay points to a base
 inside the older run. The lead preserves that base and the failed run's relevant
 diagnostics, even though both directories exceed the usual age limit. Identical
 installer copies become cleanup candidates only after digest and reference
-checks. The shared compiler cache uses its supported size limit, not an ad hoc
-cross-project merge. The work item records the holds, permitted recoverable
-removals and measured result; it does not claim that moving files to Trash freed
-space or that a fresh VM test ran.
+checks. A cache inspection also finds a fuzz corpus and a retained executable.
+The lead holds broad eviction until those contents have a verified preservation
+plan under the project's authority. Disposable cache entries can then use the
+supported size limit, not an ad hoc cross-project merge. The work item records
+the holds, permitted recoverable removals and measured result; it does not claim
+that moving files to Trash freed space or that a fresh VM test ran.

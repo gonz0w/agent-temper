@@ -57,7 +57,9 @@ Follow the project's retention decisions and the adopted
 [artifact lifecycle]({{FRAMEWORK_PATH}}/docs/reference/artifact-lifecycle.md). Before
 substantial output, check its location, storage budget and retention trigger. Keep
 required evidence separate from rebuildable intermediates; reuse verified inputs
-and supported bounded caches. Account for retained output at delivery or handoff.
+and supported bounded caches. Inspect cache contents before eviction; preserve
+fuzz corpora, reproducers and retained products even inside a cache directory.
+Account for retained output at delivery or handoff.
 Never treat age, ignored files or a dated directory as deletion permission.
 Preserve active work, holds, dependency chains and required recovery evidence;
 preview exact candidates and use only the authorized cleanup and recovery path.

@@ -225,6 +225,27 @@ mapping, consequential decisions, and remaining limits. Review current integrate
 inputs and their affected consumers. If inputs change, refresh the relevant checks.
 An agent review is a useful second examination, not proof of independent assurance.
 
+### Review a correction
+
+In the existing review record, link the prior reviewed candidate and what the
+review covered. Give the current candidate, the changes since that review, the
+disposition of each affected finding, and the affected contracts and callers.
+Include relevant changes to the integration base, policy or environment. Link
+the [fresh and retained check results](verification.md#reuse-evidence-after-a-change).
+A small correction can use a few lines.
+
+The separate reviewer checks the changes on the final candidate, the affected
+contracts and callers, and any outstanding findings. Carry prior coverage only
+where the recorded review still applies to the current inputs and project policy
+permits reuse. Examine the rest of the required review scope directly. If the
+prior review lacks a source identity or clear coverage, inspect the full scope
+required by policy. Expand review and verification when a changed contract
+affects more callers or when impact is uncertain.
+
+Record the review decision for the final candidate, including coverage carried
+forward, work examined in the follow-up, and any unresolved findings. Confirm
+the current required gates before integration.
+
 Integrate only within recorded authority and after the required checks and review.
 Close implementation work only when its completion conditions are satisfied.
 An unintegrated or abandoned change leaves unfinished work open. Reconcile linked

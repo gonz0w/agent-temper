@@ -103,6 +103,20 @@ L-15 as unselected later work, and states the native/release limits. The reviewe
 checks the combined behavior, required evidence and boundary. Passing a focused
 test alone is insufficient; satisfied integration acceptance is the stopping point.
 
+Suppose a separate reviewer examined the export, error behavior and guide on
+fictional candidate A. The lead uses the same review record to present B.
+
+> Candidate B corrects the guide's explanation of an unwritable destination.
+> The command and its test inputs match candidate A. See the correction and the
+> fresh documentation check. The export regression result is carried from A.
+
+The reviewer checks the new explanation against the command's behavior and
+records which coverage still applies to B. If B instead changes the error
+contract, include affected callers and refresh their checks and review. If the
+only earlier review says “looks good” without a candidate or coverage, inspect
+the full scope required by policy. Each path needs a review decision and the
+required gates for the final candidate. [Review a correction](../reference/workflow.md#review-a-correction)
+
 After required source checks and review pass, the lead integrates under policy
 and closes only fully completed member issues. The milestone remains open for
 its native demonstration. The lead does not add caching while waiting for review

@@ -89,7 +89,7 @@ hold a few lines like these fictional examples.
 | --- | --- |
 | The reader corrects a typo in an explanation that tests and examples do not consume | Refresh the affected reader and documentation checks. Link the export regression result and explain that its inputs are unchanged. Obtain each required gate for the corrected candidate. |
 | The serializer contract changes | Refresh writer and error-handling checks that depend on it. Return the changed contract and results to the reviewer. |
-| Export assertions pass before the required job loses its connection | Keep the assertion result and the failed job conclusion. Verify the prior work has stopped. If the recorded allowance and integration system support it, rerun only that job on the same candidate. Confirm its new conclusion and the validity of the other required gates. |
+| Export assertions pass before the required job loses its connection | Keep the assertion result and the failed job conclusion. Confirm the prior work stopped and reconcile its effects. Rerun only that job on the same candidate if project policy permits, the allowance remains, and the integration system supports the rerun and accepts the other current gates. Confirm the new conclusion. |
 
 Use the [evidence reuse procedure](../reference/verification.md#reuse-evidence-after-a-change)
 to decide what to retain. Record an interrupted gate as unmet until the integration

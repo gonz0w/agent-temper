@@ -66,10 +66,26 @@ is not integration enforcement. Formatting, static analysis, linting, secrets,
 dependency provenance, and license checks are selected for the project's actual
 stack and risk. Avoid importing a large tool suite without a demonstrated need.
 
-Do not rerun unchanged expensive checks merely because a new review record exists.
-Evidence reuse needs the same relevant inputs, environment assumptions, and valid
-scope. Changes to contracts, validation policy, fixtures, or relevant dependencies
-can invalidate it. Required CI policies still apply to the current proposed change.
+### Reuse evidence after a change
+
+1. Compare the current candidate with the one checked. For each result you plan to
+   carry forward, use the check contract to confirm its relevant inputs,
+   environment assumptions, and scope still match. Include shared contracts,
+   fixtures, dependencies, and verification policy. If impact is uncertain,
+   investigate or refresh the check.
+2. Refresh affected checks and send material changes in scope or evidence back to
+   the reviewer. In the existing batch record, link each retained result and
+   explain why it still applies. Identify the results from fresh execution.
+3. Read the required gates for the current candidate in the integration system.
+   Where it records command results and job conclusions separately, record both.
+   Passing commands can coexist with a failed or unavailable required job.
+
+If a required job is interrupted, reconcile the previous attempt's effects before
+retrying within its recorded allowance. Rerun that job alone when project policy
+permits it and the integration system still accepts the other successful gates
+for the current candidate. Confirm the new required result and retain the
+original failure. Use the project's required check set when partial execution
+is insufficient.
 
 ## Bound attempts and stop
 

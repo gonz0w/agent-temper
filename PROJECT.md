@@ -148,6 +148,23 @@ Required verification failures cannot be waived by the implementing agent. Recor
 an unavailable check or known baseline defect and obtain an explicit decision if
 it prevents acceptance. An exception cannot fabricate evidence or expose secrets.
 
+## Artifact retention
+
+Use the [artifact lifecycle](docs/reference/artifact-lifecycle.md). This repository
+produces no native build images or release archives during ordinary verification.
+Tests use owned temporary fixtures and remove them after use. Python bytecode
+caches are rebuildable intermediates, not evidence. Do not create retained dated
+copies or duplicate source archives for each check.
+
+Keep compact source/command/result evidence in the owning issue or PR. Preserve
+full diagnostics and inputs when review, reproduction or recovery needs them, in
+an authorized location appropriate to their sensitivity. A substantial retained
+artifact needs its owner, location, finite budget and cleanup/review trigger in
+the work item before creation. Existing fixture-removal authority is unchanged;
+preexisting artifacts, version-control maintenance and destructive cleanup keep
+their existing approval boundaries. No automatic purge or consumer cleanup is
+selected by these instructions.
+
 ## Public information and maintenance
 
 Use synthetic examples and primary-source references. Do not copy private project

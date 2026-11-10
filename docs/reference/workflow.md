@@ -207,6 +207,15 @@ for investigations, costly checks and retries. If an implementation attempt
 exceeds its recorded boundary, checkpoint and replan under the same authority;
 do not quietly enlarge the batch or restart its budget.
 
+## Manage generated output
+
+Follow the project's [artifact lifecycle](artifact-lifecycle.md) before substantial
+builds, experiments or downloads. Separate required evidence from rebuildable
+intermediates, reuse verified inputs and keep caches within their recorded bounds.
+At a delivery or handoff, record retained artifacts, holds and cleanup triggers
+in the existing work item. Inspect active work and dependencies before authorized
+cleanup; a size or age limit never grants deletion permission.
+
 ## Review and integrate
 
 Create coherent changes with messages that explain the outcome and reference the

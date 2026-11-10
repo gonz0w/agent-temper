@@ -36,7 +36,9 @@ Ask about missing or contradictory decisions before work depends on them.
 Record the answers in `PROJECT.md`, using the
 [project-policy template](../../templates/project-policy.md). Include the work
 tracker, languages, supported platforms, checks, review requirements, and agent
-authority for integration and release. Record who may change each policy and
+authority for integration and release. Before substantial generated output, resolve
+[artifact locations, storage bounds, retention and cleanup authority](../reference/artifact-lifecycle.md).
+Record who may change each policy and
 how a change becomes effective.
 
 Select only the profiles and local extensions the project needs. Follow the

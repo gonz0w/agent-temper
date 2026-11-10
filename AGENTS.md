@@ -22,6 +22,10 @@ explicitly authorizes their adoption work.
 - Validate prose through links, source checks, examples, and reader review.
   For checker behavior changes, run meaningful tests red before implementation,
   then green. Never invent historical execution or weaken assertions to hide failure.
+- Follow PROJECT.md's artifact retention and the
+  [artifact lifecycle](docs/reference/artifact-lifecycle.md). Separate retained
+  evidence from temporary output, account for artifacts at handoff, and preserve
+  active work, dependencies and existing cleanup approval boundaries.
 - Run `python3 tools/verify.py`. Use Python 3.11+ standard library only for repository
   tooling. No package installation or JavaScript/TypeScript tooling is needed.
 - Changes target `main`, link completed issues, and map acceptance to actual evidence.

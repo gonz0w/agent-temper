@@ -32,6 +32,12 @@
 
 {{DOCUMENTATION_CHANGED_AND_ANY_SEPARATE_OPERATIONAL_ACCEPTANCE}}
 
+If the candidate changes after review, use this record for the follow-up. Link
+the prior candidate and coverage, the current candidate and changes, affected
+findings and contracts, and fresh or retained checks. Include any relevant change
+to the base, policy or environment. Record the separate reviewer's decision and
+coverage for the final candidate. [Review a correction](../docs/reference/workflow.md#review-a-correction)
+
 Remove guidance and irrelevant optional sections before submission. Describe the
 final change for a reviewer who has not read the conversation. Obtain the review
 required by project policy and verify the final integrated revision as required.

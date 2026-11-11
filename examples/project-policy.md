@@ -66,6 +66,17 @@ synthetic input. Network integration and production validation do not apply.
 Acceptance, applicable checks, updated documentation, and independent review must
 pass before integration; report any unavailable check instead of claiming a pass.
 
+## Artifact retention
+
+This fictional CLI uses owned temporary directories for test output and removes
+those fixtures after each run. Compact verification results stay in the issue or
+PR; a failing reproduction and its useful diagnostics remain until reviewed and
+resolved. No native images, installer mirror or shared compiler cache is needed.
+Before retaining substantial output, the owner approves its storage budget,
+location, review trigger and any hold. Agents may remove their own disposable
+fixtures, but cleanup of preexisting files or version-control storage needs owner
+approval. These synthetic permissions grant no real authority.
+
 ## Agent authority
 
 Agents may implement accepted scope, add tests, update docs, create bounded issues,

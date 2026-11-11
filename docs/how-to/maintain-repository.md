@@ -17,6 +17,11 @@ work item. A trigger can be a new report, failed check, support change, or an
 authorized maintenance request. Identify the relevant records or time window and
 any permitted changes. Do not turn a pass into an unbounded repository cleanup.
 
+For a storage or generated-output pass, follow the
+[artifact lifecycle](../reference/artifact-lifecycle.md). Inventory read-only first,
+verify owners, retained evidence and dependencies, then preview only the authorized
+candidates. This guide does not grant deletion, Git pruning or native-run authority.
+
 For example, a fictional task could inspect reports filed against the last release
 and finish when each has evidence, a classification, and a next action. Fixing
 every reported defect is outside that task unless its acceptance says otherwise.

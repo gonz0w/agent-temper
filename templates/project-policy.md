@@ -51,6 +51,7 @@ copying them does not select a process or change permissions.
 | Supported platforms and compatibility | {{PLATFORMS_AND_SUPPORT_BOUNDARIES}} |
 | Dependency and new-language approval | {{DEPENDENCY_AND_STACK_POLICY}} |
 | Architecture, security, privacy, and resource limits | {{LIMITS_AND_CANONICAL_REFERENCES}} |
+| Generated output, evidence, downloads and caches | {{LOCATIONS_STORAGE_BOUNDS_RETENTION_TRIGGERS_HOLDS_AND_OWNERS_OR_JUSTIFIED_NOT_APPLICABLE}} |
 | Public contribution and licensing rules | {{LICENSE_AND_CONTRIBUTION_RULES}} |
 
 ## Work and verification
@@ -90,6 +91,12 @@ bundle. Record runtime verification and evaluation evidence in the adoption work
 item; a model choice never changes the authority table below. Omit this guidance
 when the project does not use model routing.
 
+Use the [artifact lifecycle]({{FRAMEWORK_PATH}}/docs/reference/artifact-lifecycle.md) for substantial
+generated output. Set finite limits and cleanup/review triggers by artifact class;
+identify canonical retained copies and any active, release, evidence or recovery
+holds. Reuse existing work records for actual candidates and results. Limits do
+not authorize deletion or sharing; record cleanup and recovery authority below.
+
 ## Agent authority
 
 Specify **allowed**, **ask first**, or **prohibited**, with conditions. A tool's
@@ -111,6 +118,7 @@ permission rule for unrelated projects.
 | Integrate or merge accepted changes | {{INTEGRATION_AUTHORITY}} |
 | Publish releases and packages | {{RELEASE_AUTHORITY}} |
 | Deploy or operate production and external services | {{OPERATIONS_AUTHORITY}} |
+| Cleanup, cache eviction, worktree and version-control maintenance | {{PERMITTED_SCOPE_RECOVERY_CHECKS_AND_APPROVAL_BOUNDARIES}} |
 | Destructive actions, secrets, spending, and external communication | {{SENSITIVE_ACTION_AUTHORITY}} |
 
 ## Exceptions and changes

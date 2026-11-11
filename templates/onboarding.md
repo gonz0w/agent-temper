@@ -40,6 +40,9 @@ work while a required answer is pending; do not proceed with dependent work.
   short repository map improve the existing architecture references?
 - When are TDD, a failing reproduction, integration tests, or manual checks required?
 - Which checks need a real system or external service, and what evidence is enough?
+- Where do generated output, retained evidence, reusable downloads and caches live?
+  What storage bounds and cleanup/review events apply, who owns them, and which
+  active-work, dependency, release or recovery holds prevent removal?
 - What documentation, naming, licensing, and writing conventions apply?
 
 ## Work and authority
@@ -60,6 +63,8 @@ work while a required answer is pending; do not proceed with dependent work.
 - May agents commit, push, and open reviews? What independent review is required?
 - May agents integrate after checks and review, or must they stop for approval?
 - Who may publish releases, deploy, access secrets, spend money, or contact others?
+- Which cleanup, cache eviction, worktree and version-control maintenance actions
+  are permitted? What preview, recovery and confirmation requirements apply?
 - Which actions are prohibited? What are the acceptance and completion gates?
 - Which events trigger repository maintenance, and what may an agent resolve?
   For shipped software, where are release, recovery, support, and incident procedures?

@@ -57,16 +57,20 @@ the recorded decision maker. That role may be a person or an authorized agent.
    examples with the behavior. Keep changes readable, explain consequential
    choices, and provide setup, recovery, and support limits where relevant.
 8. **Finish and reconcile.** Review the integrated result, satisfy the applicable
-   gates, and update the work record. Integration, release, deployment, and
-   operational acceptance are separate events when the project distinguishes them.
+   gates, and update the work record. Account for generated output under the
+   project's artifact-retention policy; preserve required evidence and recovery
+   assets. Integration, release, deployment, and operational acceptance are separate
+   events when the project distinguishes them.
 
 ## Decide locally
 
 The project must record its purpose and constraints, work authority, technology
 and support scope, verification commands, documentation conventions, and authority
 for review, integration, release, and consequential external actions. Record
-license and dependency policy where material. An explicit "not applicable" needs
-a reason; an empty field is not consent.
+license and dependency policy where material. Before substantial generated output,
+record its locations, storage bounds, retention triggers and cleanup authority
+under the [artifact lifecycle](docs/reference/artifact-lifecycle.md). An explicit
+"not applicable" needs a reason; an empty field is not consent.
 
 Projects may strengthen requirements. A departure from a core requirement must be
 visible as a deviation; do not claim full method conformance for that scope. A
@@ -95,6 +99,7 @@ after checking its users and recovery implications.
 - [Workflow](docs/reference/workflow.md): discovery through maintenance and continuation.
 - [Verification](docs/reference/verification.md): test selection, evidence, and review.
 - [Documentation](docs/reference/documentation.md): structure and clear writing for readers.
+- [Artifact lifecycle](docs/reference/artifact-lifecycle.md): bounded output, retained evidence, and safe cleanup.
 - [Profiles and extensions](docs/reference/extensions.md): compose rules and feed adoption findings back.
 - [GitHub profile](profiles/github.md): the first concrete mapping of portable concepts.
 - [Strict test-first profile](profiles/strict-test-first.md): an optional stronger verification practice.

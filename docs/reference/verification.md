@@ -144,6 +144,9 @@ Historical evidence remains tied to the bytes and conditions actually measured.
 Keep those inputs resolvable through retained source revisions or artifacts before
 changing them. Do not rewrite old results to describe current code. Do not require
 duplicate source archives when existing retention already preserves the inputs.
+Keep retained evidence separate from rebuildable output and apply the project's
+[artifact lifecycle](artifact-lifecycle.md). Retention limits never remove an unmet
+review, reproduction, incident or recovery need without its authorized disposition.
 
 ## Compare agent workflows
 

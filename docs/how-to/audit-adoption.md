@@ -10,7 +10,7 @@ invoke Git or subprocesses, access the network, or write to either input.
 First follow the [adoption preflight](preflight-adoption.md) in the owning issue.
 Honor the consumer's execution policy: a read-only helper is not permission to run
 Python on a prohibited host or replace a mandatory gate. This helper is optional,
-outside the nine-file portable bundle, and not part of its checksum manifest.
+outside the portable bundle and its checksum manifest.
 
 Obtain `tools/audit_adoption.py` from a reviewed Temper source through your approved
 source process. You can run it there or copy that single script to an approved
@@ -23,7 +23,7 @@ A current upstream checkout at another revision is not the correct comparison.
 Supply these inputs explicitly:
 
 - `--consumer`: the consumer root containing `.agent-temper/`.
-- `--source`: the local upstream source root containing the nine upstream files
+- `--source`: the local upstream source root containing the selected bundle files
   and, when comparing standard roles, their `templates/codex/agents/` files.
 - `--revision`: the expected full 40-character lowercase hexadecimal revision.
   This compares a declaration, not a verified commit identity.
@@ -51,8 +51,8 @@ Parent components are retained for physical checking, including those before
 `..`; traversal through real directories remains supported.
 Keep inputs unchanged during the audit. No client or model needs to run.
 
-Expected result for matching synthetic inputs: exit 0, `errors: []`,
-`bundle_files_compared: 9`, the declared revision, and one role observation with
+Expected result for matching current synthetic inputs: exit 0, `errors: []`,
+`bundle_files_compared: 10`, the declared revision, and one role observation with
 `template_comparison: "matches"`. Omitting `--role` produces `roles: []` without
 inspecting `.codex/`. These are example expectations, not a real consumer audit.
 
@@ -98,7 +98,7 @@ Unselected roles, `.codex/config.toml` and role permissions at runtime are not c
 
 ## File contract and limits
 
-This version expects these nine upstream files, plus local `SOURCE.md` and
+This version expects these upstream files, plus local `SOURCE.md` and
 `SHA256SUMS`, with no additional bundle entries:
 
 ```text
@@ -113,7 +113,11 @@ profiles/github.md
 profiles/strict-test-first.md
 ```
 
-The manifest must list all nine files once. It may additionally list `SOURCE.md`
+The current bundle also requires `docs/reference/artifact-lifecycle.md` when
+that guide is present in the trusted source or linked from its `METHOD.md`.
+Historical pins without the guide retain their nine-file inventory.
+
+The manifest must list each expected file once. It may additionally list `SOURCE.md`
 once, supporting both documented provenance layouts. Each line contains a
 64-digit hexadecimal SHA-256 digest, one space, then a space or `*`, then an exact
 listed relative filename. Uppercase digests are accepted. Blank/comment lines,
@@ -133,7 +137,7 @@ Each inspected file is limited to 1 MiB. Each bundle directory is limited to 32
 entries, and only the fixed bundle directories are descended. Unexpected directory
 contents are not traversed. Symlinks, special files, unreadable inputs, malformed
 UTF-8 metadata and TOML are rejected. Bundle/source payload bytes need not be text.
-Source files outside the nine names and selected templates are not inventoried.
+Source files outside the allowed bundle names and selected templates are not inventoried.
 
 This is a bounded comparison helper, not a hardened hostile-filesystem sandbox.
 It checks path components and regular-file types and uses no-follow opens where

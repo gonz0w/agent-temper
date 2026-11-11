@@ -18,6 +18,7 @@ FILES = (
     'profiles/strict-test-first.md',
 )
 REVISION = 'a' * 40
+LIFECYCLE = 'docs/reference/artifact-lifecycle.md'
 REPOSITORY = 'https://github.com/gonz0w/agent-temper'
 ROLE = '''name = "temper_product"
 description = "Synthetic task"
@@ -53,8 +54,8 @@ class AdoptionAudit(unittest.TestCase):
             path.write_text(ROLE, encoding='utf-8')
         self.manifest()
 
-    def manifest(self, include_source=False):
-        names = FILES + (('SOURCE.md',) if include_source else ())
+    def manifest(self, include_source=False, extra_files=()):
+        names = FILES + extra_files + (('SOURCE.md',) if include_source else ())
         (self.bundle / 'SHA256SUMS').write_text(''.join(
             f'{hashlib.sha256((self.bundle / name).read_bytes()).hexdigest()}  {name}\n'
             for name in sorted(names)
@@ -88,6 +89,25 @@ class AdoptionAudit(unittest.TestCase):
             self.assertEqual(report['bundle_files_compared'], 9)
             self.assertEqual(report['declared_revision'], REVISION)
             self.assertTrue(report['limits'])
+
+    def test_lifecycle_bundle_requires_and_compares_guide(self):
+        for parent in (self.source, self.bundle):
+            (parent / 'METHOD.md').write_text(f'[Artifact lifecycle]({LIFECYCLE})\n')
+            (parent / LIFECYCLE).write_text('Synthetic lifecycle guide\n')
+        self.manifest(extra_files=(LIFECYCLE,))
+        self.assertEqual(self.run_audit()['bundle_files_compared'], 10)
+        (self.bundle / LIFECYCLE).write_text('Drift\n')
+        self.manifest(extra_files=(LIFECYCLE,))
+        self.assertIn('source_mismatch', self.codes(self.run_audit(expected=1)))
+        (self.bundle / LIFECYCLE).unlink()
+        self.manifest()
+        self.assertTrue({'missing_file', 'manifest_inventory'}
+                        <= self.codes(self.run_audit(expected=1)))
+        (self.source / LIFECYCLE).unlink()
+        errors = self.run_audit(expected=1)['errors']
+        self.assertTrue(any(item['code'] == 'missing_file'
+                            and item['location'] == f'source/{LIFECYCLE}'
+                            for item in errors))
 
     def test_selected_role_subset_and_overrides_are_observations(self):
         path = self.consumer / '.codex/agents/temper_product.toml'

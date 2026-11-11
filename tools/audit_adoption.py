@@ -18,6 +18,7 @@ BUNDLE_FILES = (
     'docs/reference/workflow.md', 'profiles/codex.md', 'profiles/github.md',
     'profiles/strict-test-first.md',
 )
+LIFECYCLE = 'docs/reference/artifact-lifecycle.md'
 DIRECTORIES = {'docs', 'docs/reference', 'profiles'}
 REPOSITORY = 'https://github.com/gonz0w/agent-temper'
 FIELDS = ('name', 'description', 'developer_instructions', 'model',
@@ -37,7 +38,7 @@ MESSAGES = {
     'inventory_limit': 'Bundle directory exceeds the 32-entry inspection limit.',
     'invalid_text': 'Metadata must be valid UTF-8 text.',
     'invalid_manifest': 'Use one SHA-256 digest and exact allowed relative path per line.',
-    'manifest_inventory': 'List all nine upstream files once; SOURCE.md is optional.',
+    'manifest_inventory': 'List each upstream file once; SOURCE.md is optional.',
     'digest_mismatch': 'File bytes differ from SHA256SUMS; investigate before updating.',
     'source_mismatch': 'Bundle bytes differ from the supplied source copy.',
     'invalid_provenance': 'Require one canonical Repository and one matching full Revision field.',
@@ -113,7 +114,7 @@ class Audit:
             self.error('invalid_text', location)
             return None
 
-    def inventory(self, root, relative=''):
+    def inventory(self, root, bundle_files, relative=''):
         location = 'bundle' + (f'/{relative}' if relative else '')
         if not self.directory(root / relative, location):
             return
@@ -128,8 +129,8 @@ class Audit:
             for name in sorted(items):
                 child = f'{relative}/{name}' if relative else name
                 if child in DIRECTORIES:
-                    self.inventory(root, child)
-                elif child in (*BUNDLE_FILES, 'SOURCE.md', 'SHA256SUMS'):
+                    self.inventory(root, bundle_files, child)
+                elif child in (*bundle_files, 'SOURCE.md', 'SHA256SUMS'):
                     # The bounded read below checks regular-file type.
                     continue
                 else:
@@ -137,18 +138,18 @@ class Audit:
         except OSError:
             self.error('unreadable_input', location)
 
-    def manifest(self, text):
+    def manifest(self, text, bundle_files):
         digests = {}
         if text is None:
             return digests
         for number, line in enumerate(text.splitlines(), 1):
             match = re.fullmatch(r'([0-9a-fA-F]{64}) [ *](.+)', line)
-            if (not match or match[2] not in (*BUNDLE_FILES, 'SOURCE.md')
+            if (not match or match[2] not in (*bundle_files, 'SOURCE.md')
                     or match[2] in digests):
                 self.error('invalid_manifest', 'bundle/SHA256SUMS', number)
                 continue
             digests[match[2]] = match[1].lower()
-        if set(digests) - {'SOURCE.md'} != set(BUNDLE_FILES):
+        if set(digests) - {'SOURCE.md'} != set(bundle_files):
             self.error('manifest_inventory', 'bundle/SHA256SUMS')
         return digests
 
@@ -217,23 +218,33 @@ def audit(consumer, source, revision, roles):
     source_ok = check.directory(source, 'source')
     bundle = consumer / '.agent-temper'
     if consumer_ok and check.directory(bundle, 'bundle'):
-        check.inventory(bundle)
+        bundle_files = BUNDLE_FILES
+        upstream = {}
+        if source_ok:
+            upstream = {name: check.read(source, name, f'source/{name}')
+                        for name in BUNDLE_FILES}
+            method_requires_guide = LIFECYCLE.encode() in (upstream['METHOD.md'] or b'')
+            lifecycle = check.read(source, LIFECYCLE, f'source/{LIFECYCLE}',
+                                   optional=not method_requires_guide)
+            if method_requires_guide or lifecycle is not None:
+                bundle_files += (LIFECYCLE,)
+                upstream[LIFECYCLE] = lifecycle
+        check.inventory(bundle, bundle_files)
         contents = {name: check.read(bundle, name, f'bundle/{name}')
-                    for name in (*BUNDLE_FILES, 'SOURCE.md', 'SHA256SUMS')}
-        manifest = check.manifest(check.text(contents['SHA256SUMS'], 'bundle/SHA256SUMS'))
+                    for name in (*bundle_files, 'SOURCE.md', 'SHA256SUMS')}
+        manifest = check.manifest(check.text(contents['SHA256SUMS'], 'bundle/SHA256SUMS'),
+                                  bundle_files)
         for name, digest in sorted(manifest.items()):
             data = contents[name]
             if data is not None and hashlib.sha256(data).hexdigest() != digest:
                 check.error('digest_mismatch', f'bundle/{name}')
         report['declared_revision'] = check.provenance(
             check.text(contents['SOURCE.md'], 'bundle/SOURCE.md'), revision)
-        if source_ok:
-            for name in BUNDLE_FILES:
-                upstream = check.read(source, name, f'source/{name}')
-                if upstream is not None and contents[name] is not None:
-                    report['bundle_files_compared'] += 1
-                    if upstream != contents[name]:
-                        check.error('source_mismatch', f'bundle/{name}')
+        for name, data in upstream.items():
+            if data is not None and contents[name] is not None:
+                report['bundle_files_compared'] += 1
+                if data != contents[name]:
+                    check.error('source_mismatch', f'bundle/{name}')
     seen = set()
     if len(roles) > MAX_ENTRIES:
         check.error('invalid_role_name', 'arguments')

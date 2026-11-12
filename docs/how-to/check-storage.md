@@ -46,7 +46,7 @@ Run after staging and before committing:
 python3 tools/storage_guard.py staged --repo .
 ```
 
-Git is required for this subcommand only. The guard checks newly staged or changed
+Git is required for `staged` and `tree`; `preflight` needs no Git. The guard checks newly staged or changed
 index blobs, including partially staged content. It refuses blobs larger than
 10 MiB and common disk/media extensions, including small sparse-image stand-ins.
 An explicit `--max-blob-bytes` chooses another documented local limit. A genuine

@@ -79,3 +79,10 @@ outside the checks above. Use the documented subset for repository documents.
 A passing result does not establish factual accuracy, useful tests, policy
 compliance, security, or ASD-STE100 compliance. Human and agent review must inspect
 the content, evidence, and rendered result.
+
+## Optional storage guard
+
+Use the read-only [storage preflight and staged-artifact guard](../docs/how-to/check-storage.md)
+with explicit local budgets before substantial output or commits. It does not
+install hooks, delete data or alter consumer policy. Synthetic tests run in the
+verifier; the optional Git index test is skipped when Git is unavailable.
